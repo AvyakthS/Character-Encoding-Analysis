@@ -138,7 +138,7 @@ python script\_v8\_fulltestsuite.py
 
 ### **📝 License & Credits**
 
-* **Author:** Avyakths  
+* **Author:** Avyakth Shriram  
 * **License:** Open Source (MIT)
 
 *Special thanks to the Python tracemalloc documentation and the Unicode Consortium for the specific byte-width details used in our methodology analysis.*
