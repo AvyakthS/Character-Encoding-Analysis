@@ -92,7 +92,7 @@ The project adopts a "Sandboxed Versioning" architecture. Each version of the sc
 │  
 ├── README.md  
 │  
-└── docs/                                \# 📘 Research Notes & Logs
+└── docs/                                \# 📘 Research Notes & Logs  
     ├── CHANGELOG.md                     \# Version history  
     ├── METHODOLOGY.md                   \# Scientific defense of the methods  
     └── JOURNAL.md                       \# Key findings and research notes
