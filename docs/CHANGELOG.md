@@ -3,12 +3,12 @@
 ## [v9.0.0] - The "Fancy" Release
 * **Methodology:** Implemented **Adaptive Timing**. Tests now target a 2.0-second runtime instead of fixed iterations, ensuring accuracy across all speed classes.
 * **Performance:** Added **Parallel Dataset Generation** using `ThreadPoolExecutor` to speed up the startup phase.
-* **Visualization:** Integrated `matplotlib` to automatically generate PNG charts for Storage, Speed, and Memory.
+* **Visualisation:** Integrated `matplotlib` to automatically generate PNG charts for Storage, Speed, and Memory.
 * **Bug Fix:** Fixed a reporting index error where English test results were mislabeled in the final summary table.
 
 ## [v8.0.0] - The "Analysis" Release
-* **Research Focus:** Standardization of Methodology.
-* **Feature:** Implemented the **"Auto-Prep Pipeline"** to normalize all datasets to **20MB**, ensuring fair comparisons.
+* **Research Focus:** Standardisation of Methodology.
+* **Feature:** Implemented the **"Auto-Prep Pipeline"** to normalise all datasets to **20MB**, ensuring fair comparisons.
 * **Output:** Generates the final comparative tables for the report.
 
 ## [v7.0.0] - The "Utility" Release
