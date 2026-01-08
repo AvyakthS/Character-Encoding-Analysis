@@ -1,0 +1,36 @@
+Test,Dataset,Encoding,Metric,Value,vs. Baseline
+File I/O,English (ASCII-heavy),ascii,File Size,"860,465 B",98.4%
+File I/O,English (ASCII-heavy),utf-8,File Size,"874,542 B",100.0%
+File I/O,English (ASCII-heavy),utf-16,File Size,"1,730,346 B",197.9%
+File I/O,English (ASCII-heavy),utf-32,File Size,"3,460,692 B",395.7%
+File I/O,Multilingual,utf-8,File Size,"22,401 B",100.0%
+File I/O,Multilingual,utf-16,File Size,"44,496 B",198.6%
+File I/O,Multilingual,utf-32,File Size,"88,856 B",396.7%
+In-Memory,English (ASCII-heavy),ascii,Encode Time,0.00037073 s,1.00x
+In-Memory,English (ASCII-heavy),ascii,Decode Time,0.00002953 s,8.48x
+In-Memory,English (ASCII-heavy),ascii,Encode Peak Mem,0.8251 MB,33.3%
+In-Memory,English (ASCII-heavy),ascii,Decode Peak Mem,0.8206 MB,N/A
+In-Memory,English (ASCII-heavy),utf-8,Encode Time,0.00036967 s,1.00x
+In-Memory,English (ASCII-heavy),utf-8,Decode Time,0.00025029 s,1.00x
+In-Memory,English (ASCII-heavy),utf-8,Encode Peak Mem,2.4753 MB,100.0%
+In-Memory,English (ASCII-heavy),utf-8,Decode Peak Mem,2.5022 MB,N/A
+In-Memory,English (ASCII-heavy),utf-16,Encode Time,0.00021912 s,1.69x
+In-Memory,English (ASCII-heavy),utf-16,Decode Time,0.00008966 s,2.79x
+In-Memory,English (ASCII-heavy),utf-16,Encode Peak Mem,1.6502 MB,66.7%
+In-Memory,English (ASCII-heavy),utf-16,Decode Peak Mem,2.4754 MB,N/A
+In-Memory,English (ASCII-heavy),utf-32,Encode Time,0.00035240 s,1.05x
+In-Memory,English (ASCII-heavy),utf-32,Decode Time,0.00035470 s,0.71x
+In-Memory,English (ASCII-heavy),utf-32,Encode Peak Mem,3.3004 MB,133.3%
+In-Memory,English (ASCII-heavy),utf-32,Decode Peak Mem,2.4754 MB,N/A
+In-Memory,Multilingual,utf-8,Encode Time,0.00001576 s,1.00x
+In-Memory,Multilingual,utf-8,Decode Time,0.00000462 s,1.00x
+In-Memory,Multilingual,utf-8,Encode Peak Mem,0.0848 MB,100.0%
+In-Memory,Multilingual,utf-8,Decode Peak Mem,0.1283 MB,N/A
+In-Memory,Multilingual,utf-16,Encode Time,0.00001467 s,1.07x
+In-Memory,Multilingual,utf-16,Decode Time,0.00000776 s,0.60x
+In-Memory,Multilingual,utf-16,Encode Peak Mem,0.0425 MB,50.1%
+In-Memory,Multilingual,utf-16,Decode Peak Mem,0.1274 MB,N/A
+In-Memory,Multilingual,utf-32,Encode Time,0.00000850 s,1.85x
+In-Memory,Multilingual,utf-32,Decode Time,0.00001055 s,0.44x
+In-Memory,Multilingual,utf-32,Encode Peak Mem,0.0848 MB,100.0%
+In-Memory,Multilingual,utf-32,Decode Peak Mem,0.1272 MB,N/A

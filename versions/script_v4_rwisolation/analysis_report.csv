@@ -1,0 +1,29 @@
+Test,Dataset,Encoding,Metric,Value,vs. Baseline
+File I/O,English (ASCII-heavy),ascii,File Size,860465,98.4%
+File I/O,English (ASCII-heavy),utf-8,File Size,874542,100.0%
+File I/O,English (ASCII-heavy),utf-16,File Size,1730346,197.9%
+File I/O,English (ASCII-heavy),utf-32,File Size,3460692,395.7%
+File I/O,Multilingual,utf-8,File Size,22401,100.0%
+File I/O,Multilingual,utf-16,File Size,44496,198.6%
+File I/O,Multilingual,utf-32,File Size,88856,396.7%
+In-Memory,English (ASCII-heavy),ascii,Encode Time,0.00037237 s,1.00x
+In-Memory,English (ASCII-heavy),ascii,Decode Time,0.00002975 s,8.43x
+In-Memory,English (ASCII-heavy),ascii,Encode Peak Mem,0.8251 MB,33.3%
+In-Memory,English (ASCII-heavy),utf-8,Encode Time,0.00037181 s,1.00x
+In-Memory,English (ASCII-heavy),utf-8,Decode Time,0.00025091 s,1.00x
+In-Memory,English (ASCII-heavy),utf-8,Encode Peak Mem,2.4753 MB,100.0%
+In-Memory,English (ASCII-heavy),utf-16,Encode Time,0.00022132 s,1.68x
+In-Memory,English (ASCII-heavy),utf-16,Decode Time,0.00008972 s,2.80x
+In-Memory,English (ASCII-heavy),utf-16,Encode Peak Mem,1.6502 MB,66.7%
+In-Memory,English (ASCII-heavy),utf-32,Encode Time,0.00035389 s,1.05x
+In-Memory,English (ASCII-heavy),utf-32,Decode Time,0.00035966 s,0.70x
+In-Memory,English (ASCII-heavy),utf-32,Encode Peak Mem,3.3004 MB,133.3%
+In-Memory,Multilingual,utf-8,Encode Time,0.00001583 s,1.00x
+In-Memory,Multilingual,utf-8,Decode Time,0.00000489 s,1.00x
+In-Memory,Multilingual,utf-8,Encode Peak Mem,0.0848 MB,100.0%
+In-Memory,Multilingual,utf-16,Encode Time,0.00001535 s,1.03x
+In-Memory,Multilingual,utf-16,Decode Time,0.00000832 s,0.59x
+In-Memory,Multilingual,utf-16,Encode Peak Mem,0.0425 MB,50.1%
+In-Memory,Multilingual,utf-32,Encode Time,0.00000887 s,1.79x
+In-Memory,Multilingual,utf-32,Decode Time,0.00001061 s,0.46x
+In-Memory,Multilingual,utf-32,Encode Peak Mem,0.0848 MB,100.0%

@@ -1,0 +1,1321 @@
+Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+avyakths@pop-os ~/d/C/v/script_v1_prototype (main)> python3 script_v1_prototype.py
+Running encoding analysis... This may take a moment.
+
+--- Testing Dataset: English (ASCII-heavy) (/home/avyakths/development/Character Encoding Analysis/versions/script_v1_prototype/../../user_bench_files_freesize/english.txt) ---
+--- Testing Dataset: Multilingual (/home/avyakths/development/Character Encoding Analysis/versions/script_v1_prototype/../../user_bench_files_freesize/multilingual.txt) ---
+
+Successfully wrote detailed log to: encoding_results.csv
+
+--- FINAL RESULTS (Console) ---
+Dataset                 | Encoding   | File Size (Bytes)  | Avg. Write Time (s)    | Avg. Read Time (s)
+---------------------------------------------------------------------------------------------------------
+English (ASCII-heavy)   | ascii      | 860,465            | 0.00000112             | 0.00007676
+English (ASCII-heavy)   | utf-8      | 874,542            | 0.00000091             | 0.00066586
+English (ASCII-heavy)   | utf-16     | 1,730,346          | 0.00000971             | 0.00015773
+English (ASCII-heavy)   | utf-32     | 3,460,692          | 0.00001128             | 0.00047928
+Multilingual            | utf-8      | 22,401             | 0.00000037             | 0.00002810
+Multilingual            | utf-16     | 44,496             | 0.00000006             | 0.00003099
+Multilingual            | utf-32     | 88,856             | 0.00000005             | 0.00003400
+avyakths@pop-os ~/d/C/v/script_v1_prototype (main)> cd ..
+avyakths@pop-os ~/d/C/versions (main)> cd script_v2_splitarch/
+avyakths@pop-os ~/d/C/v/script_v2_splitarch (main)> python3 script_v2_splitarch.py
+Running encoding analysis V2... This may take a moment.
+
+--- Test Suite 1: File I/O (Disk-Bound) ---
+  Testing Dataset: English (ASCII-heavy) (/home/avyakths/development/Character Encoding Analysis/versions/script_v2_splitarch/../../user_bench_files_freesize/english.txt)
+  Testing Dataset: Multilingual (/home/avyakths/development/Character Encoding Analysis/versions/script_v2_splitarch/../../user_bench_files_freesize/multilingual.txt)
+
+--- Test Suite 2: In-Memory (CPU-Bound) ---
+  Testing Dataset: English (ASCII-heavy) (/home/avyakths/development/Character Encoding Analysis/versions/script_v2_splitarch/../../user_bench_files_freesize/english.txt)
+  Testing Dataset: Multilingual (/home/avyakths/development/Character Encoding Analysis/versions/script_v2_splitarch/../../user_bench_files_freesize/multilingual.txt)
+
+Successfully wrote I/O test log to: io_results.csv
+Successfully wrote CPU test log to: cpu_results.csv
+
+--- FINAL RESULTS (File I/O) ---
+Dataset                 | Encoding   | File Size (Bytes)  | Avg. Write Time (s)    | Avg. Read Time (s)     | Avg CPU (%)     | RAM Delta (MB)
+---------------------------------------------------------------------------------------------------------------------------------------
+English (ASCII-heavy)   | ascii      | 860465             | 0.00083220             | 0.00006879             | 73.20           | 2.4766
+English (ASCII-heavy)   | utf-8      | 874542             | 0.00114848             | 0.00065811             | 86.30           | 2.5117
+English (ASCII-heavy)   | utf-16     | 1730346            | 0.00111346             | 0.00015817             | 62.10           | 1.6562
+English (ASCII-heavy)   | utf-32     | 3460692            | 0.00202997             | 0.00047152             | 62.00           | 2.5039
+Multilingual            | utf-8      | 22401              | 0.00008163             | 0.00002782             | 91.30           | -8.8672
+Multilingual            | utf-16     | 44496              | 0.00008376             | 0.00002917             | 88.50           | 0.0000
+Multilingual            | utf-32     | 88856              | 0.00010214             | 0.00003374             | 80.90           | 0.0039
+
+--- FINAL RESULTS (In-Memory CPU) ---
+Dataset                 | Encoding   | Avg. Encode Time (s)   | Avg. Decode Time (s)   | Avg CPU (%)     | RAM Delta (MB)
+-------------------------------------------------------------------------------------------------------------------
+English (ASCII-heavy)   | ascii      | 0.00037143             | 0.00003016             | 99.60           | 0.0000
+English (ASCII-heavy)   | utf-8      | 0.00037279             | 0.00025365             | 100.60          | 4.0977
+English (ASCII-heavy)   | utf-16     | 0.00022097             | 0.00008972             | 99.80           | 0.0000
+English (ASCII-heavy)   | utf-32     | 0.00035539             | 0.00035984             | 99.30           | 4.9219
+Multilingual            | utf-8      | 0.00001657             | 0.00000470             | 140.70          | -8.1250
+Multilingual            | utf-16     | 0.00001467             | 0.00000760             | 89.60           | 0.0000
+Multilingual            | utf-32     | 0.00000859             | 0.00001027             | 105.80          | 0.0000
+avyakths@pop-os ~/d/C/v/script_v2_splitarch (main)> cd ../script_v3_tracemalloc/
+avyakths@pop-os ~/d/C/v/script_v3_tracemalloc (main)> python3 script_v3_tracemalloc.py
+Running encoding analysis V3 (with tracemalloc)... This may take a moment.
+
+--- Test Suite 1: File I/O (Disk-Bound) ---
+  Testing Dataset: English (ASCII-heavy) (/home/avyakths/development/Character Encoding Analysis/versions/script_v3_tracemalloc/../../user_bench_files_freesize/english.txt)
+  Testing Dataset: Multilingual (/home/avyakths/development/Character Encoding Analysis/versions/script_v3_tracemalloc/../../user_bench_files_freesize/multilingual.txt)
+
+--- Test Suite 2: In-Memory (CPU-Bound) ---
+  Testing Dataset: English (ASCII-heavy) (/home/avyakths/development/Character Encoding Analysis/versions/script_v3_tracemalloc/../../user_bench_files_freesize/english.txt)
+  Testing Dataset: Multilingual (/home/avyakths/development/Character Encoding Analysis/versions/script_v3_tracemalloc/../../user_bench_files_freesize/multilingual.txt)
+
+Successfully wrote I/O test log to: io_results.csv
+Successfully wrote CPU test log to: cpu_results.csv
+
+--- FINAL RESULTS (File I/O) ---
+Dataset                 | Encoding   | File Size (Bytes)  | Avg. Write Time (s)    | Avg. Read Time (s)     | Avg CPU (%)     | RAM Delta (MB)
+---------------------------------------------------------------------------------------------------------------------------------------
+English (ASCII-heavy)   | ascii      | 860465             | 0.00084890             | 0.00006994             | 74.00           | 2.4648
+English (ASCII-heavy)   | utf-8      | 874542             | 0.00111701             | 0.00064937             | 86.00           | 2.5430
+English (ASCII-heavy)   | utf-16     | 1730346            | 0.00111702             | 0.00015841             | 61.20           | 1.6562
+English (ASCII-heavy)   | utf-32     | 3460692            | 0.00207728             | 0.00047732             | 62.20           | 2.4766
+Multilingual            | utf-8      | 22401              | 0.00007872             | 0.00002546             | 86.30           | -8.8672
+Multilingual            | utf-16     | 44496              | 0.00008227             | 0.00002941             | 89.50           | 0.0117
+Multilingual            | utf-32     | 88856              | 0.00009684             | 0.00003287             | 77.10           | 0.0000
+
+--- FINAL RESULTS (In-Memory CPU) ---
+Dataset                 | Encoding   | Avg. Encode Time (s)   | Avg. Decode Time (s)   | Avg CPU (%)     | Encode Peak (MB)   | Decode Peak (MB)
+---------------------------------------------------------------------------------------------------------------------------------------
+English (ASCII-heavy)   | ascii      | 0.00037699             | 0.00003269             | 100.10          | 1.6473             | 1.6414
+English (ASCII-heavy)   | utf-8      | 0.00037712             | 0.00025644             | 101.00          | 3.3094             | 4.1525
+English (ASCII-heavy)   | utf-16     | 0.00022366             | 0.00009429             | 97.50           | 3.3005             | 4.1257
+English (ASCII-heavy)   | utf-32     | 0.00035600             | 0.00036431             | 101.30          | 6.6009             | 4.1257
+Multilingual            | utf-8      | 0.00001988             | 0.00001175             | 94.60           | 0.1062             | 0.2132
+Multilingual            | utf-16     | 0.00001700             | 0.00001457             | 94.90           | 0.0850             | 0.2123
+Multilingual            | utf-32     | 0.00001084             | 0.00001583             | 112.30          | 0.1696             | 0.2121
+avyakths@pop-os ~/d/C/v/script_v3_tracemalloc (main)> cd ../script_v4_rwisolation/
+avyakths@pop-os ~/d/C/v/script_v4_rwisolation (main)> python3 script_v4_rwisolation.py
+
+--- Loading Dataset: English (ASCII-heavy) (/home/avyakths/development/Character Encoding Analysis/versions/script_v4_rwisolation/../../user_bench_files_freesize/english.txt) ---
+  Running Test Suite 1: File I/O (Disk-Bound)...
+  Running Test Suite 2: In-Memory (CPU-Bound)...
+  Running Test Suite 3: cProfile Validation (on utf-8)...
+
+--- cProfile Validation for: utf-8 ---
+         2001 function calls in 0.630 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3 to 1 due to restriction <'encode'>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1000    0.380    0.000    0.380    0.000 {method 'encode' of 'str' objects}
+
+
+         2001 function calls in 0.630 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3 to 1 due to restriction <'decode'>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1000    0.250    0.000    0.250    0.000 {method 'decode' of 'bytes' objects}
+
+
+
+
+--- Loading Dataset: Multilingual (/home/avyakths/development/Character Encoding Analysis/versions/script_v4_rwisolation/../../user_bench_files_freesize/multilingual.txt) ---
+  Running Test Suite 1: File I/O (Disk-Bound)...
+  Running Test Suite 2: In-Memory (CPU-Bound)...
+
+Successfully wrote I/O test log to: io_results.csv
+Successfully wrote CPU test log to: cpu_results.csv
+
+--- Test 4: Final Analysis Report (vs. utf-8) ---
+Test        | Dataset                 | Encoding   | Metric             | Value                  | vs. Baseline
+---------------------------------------------------------------------------------------------------------
+File I/O    | English (ASCII-heavy)   | ascii      | File Size          | 860465                 | 98.4%
+File I/O    | English (ASCII-heavy)   | utf-8      | File Size          | 874542                 | 100.0%
+File I/O    | English (ASCII-heavy)   | utf-16     | File Size          | 1730346                | 197.9%
+File I/O    | English (ASCII-heavy)   | utf-32     | File Size          | 3460692                | 395.7%
+File I/O    | Multilingual            | utf-8      | File Size          | 22401                  | 100.0%
+File I/O    | Multilingual            | utf-16     | File Size          | 44496                  | 198.6%
+File I/O    | Multilingual            | utf-32     | File Size          | 88856                  | 396.7%
+In-Memory   | English (ASCII-heavy)   | ascii      | Encode Time        | 0.00037237 s           | 1.00x
+In-Memory   | English (ASCII-heavy)   | ascii      | Decode Time        | 0.00002975 s           | 8.43x
+In-Memory   | English (ASCII-heavy)   | ascii      | Encode Peak Mem    | 0.8251 MB              | 33.3%
+In-Memory   | English (ASCII-heavy)   | utf-8      | Encode Time        | 0.00037181 s           | 1.00x
+In-Memory   | English (ASCII-heavy)   | utf-8      | Decode Time        | 0.00025091 s           | 1.00x
+In-Memory   | English (ASCII-heavy)   | utf-8      | Encode Peak Mem    | 2.4753 MB              | 100.0%
+In-Memory   | English (ASCII-heavy)   | utf-16     | Encode Time        | 0.00022132 s           | 1.68x
+In-Memory   | English (ASCII-heavy)   | utf-16     | Decode Time        | 0.00008972 s           | 2.80x
+In-Memory   | English (ASCII-heavy)   | utf-16     | Encode Peak Mem    | 1.6502 MB              | 66.7%
+In-Memory   | English (ASCII-heavy)   | utf-32     | Encode Time        | 0.00035389 s           | 1.05x
+In-Memory   | English (ASCII-heavy)   | utf-32     | Decode Time        | 0.00035966 s           | 0.70x
+In-Memory   | English (ASCII-heavy)   | utf-32     | Encode Peak Mem    | 3.3004 MB              | 133.3%
+In-Memory   | Multilingual            | utf-8      | Encode Time        | 0.00001583 s           | 1.00x
+In-Memory   | Multilingual            | utf-8      | Decode Time        | 0.00000489 s           | 1.00x
+In-Memory   | Multilingual            | utf-8      | Encode Peak Mem    | 0.0848 MB              | 100.0%
+In-Memory   | Multilingual            | utf-16     | Encode Time        | 0.00001535 s           | 1.03x
+In-Memory   | Multilingual            | utf-16     | Decode Time        | 0.00000832 s           | 0.59x
+In-Memory   | Multilingual            | utf-16     | Encode Peak Mem    | 0.0425 MB              | 50.1%
+In-Memory   | Multilingual            | utf-32     | Encode Time        | 0.00000887 s           | 1.79x
+In-Memory   | Multilingual            | utf-32     | Decode Time        | 0.00001061 s           | 0.46x
+In-Memory   | Multilingual            | utf-32     | Encode Peak Mem    | 0.0848 MB              | 100.0%
+
+Successfully wrote final analysis log to: analysis_report.csv
+avyakths@pop-os ~/d/C/v/script_v4_rwisolation (main)> cd ../script_v5_sleekvisuals/
+avyakths@pop-os ~/d/C/v/script_v5_sleekvisuals (main)> python3 script_v5_sleekvisuals.py
+
+
+
+    ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+    ║                                                                                                                                                                               ║
+    ║  LOADING DATASET: ENGLISH (ASCII-HEAVY) (/HOME/AVYAKTHS/DEVELOPMENT/CHARACTER ENCODING ANALYSIS/VERSIONS/SCRIPT_V5_SLEEKVISUALS/../../USER_BENCH_FILES_FREESIZE/ENGLISH.TXT)  ║
+    ║                                                                                                                                                                               ║
+    ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+  Successfully loaded 865,172 characters.
+  Running Test Suite 1: File I/O (Disk-Bound)...
+  Running Test Suite 2: In-Memory (CPU-Bound)...
+  Running Test Suite 3: cProfile Validation (on utf-8)...
+
+
+
+    ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+    ║                                                                                                                                                                           ║
+    ║  LOADING DATASET: MULTILINGUAL (/HOME/AVYAKTHS/DEVELOPMENT/CHARACTER ENCODING ANALYSIS/VERSIONS/SCRIPT_V5_SLEEKVISUALS/../../USER_BENCH_FILES_FREESIZE/MULTILINGUAL.TXT)  ║
+    ║                                                                                                                                                                           ║
+    ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+  Successfully loaded 22,213 characters.
+  Running Test Suite 1: File I/O (Disk-Bound)...
+  Running Test Suite 2: In-Memory (CPU-Bound)...
+
+  ✓ Successfully wrote raw I/O test log to: io_results.csv
+  ✓ Successfully wrote raw CPU test log to: cpu_results.csv
+  ✓ Successfully wrote final analysis log to: analysis_report.csv
+
+
+
+    ╔════════════════════════════════════════════╗
+    ║                                            ║
+    ║  TEST 1: FILE I/O (DISK-BOUND) - RAW DATA  ║
+    ║                                            ║
+    ╚════════════════════════════════════════════╝
+
+  ► Dataset: English (ASCII-heavy)
+
+  ╔══════════╦═══════════════════╦═════════════════════╦════════════════════╦══════════════════╦════════════════╗
+  ║ Encoding ║ File Size (Bytes) ║ Avg. Write Time (s) ║ Avg. Read Time (s) ║ Avg CPU Load (%) ║ RAM Delta (MB) ║
+  ╠══════════╬═══════════════════╬═════════════════════╬════════════════════╬══════════════════╬════════════════╣
+  ║ ascii    ║ 860,465           ║ 0.000837            ║ 0.000069           ║ 71.800000        ║ 2.457031       ║
+  ║ utf-8    ║ 874,542           ║ 0.000846            ║ 0.000665           ║ 84.000000        ║ 0.984375       ║
+  ║ utf-16   ║ 1,730,346         ║ 0.001136            ║ 0.000165           ║ 61.500000        ║ 4.839844       ║
+  ║ utf-32   ║ 3,460,692         ║ 0.002045            ║ 0.000463           ║ 61.000000        ║ 6.503906       ║
+  ╚══════════╩═══════════════════╩═════════════════════╩════════════════════╩══════════════════╩════════════════╝
+
+
+  ► Dataset: Multilingual
+
+  ╔══════════╦═══════════════════╦═════════════════════╦════════════════════╦══════════════════╦════════════════╗
+  ║ Encoding ║ File Size (Bytes) ║ Avg. Write Time (s) ║ Avg. Read Time (s) ║ Avg CPU Load (%) ║ RAM Delta (MB) ║
+  ╠══════════╬═══════════════════╬═════════════════════╬════════════════════╬══════════════════╬════════════════╣
+  ║ utf-8    ║ 22,401            ║ 0.000082            ║ 0.000027           ║ 92.000000        ║ 0.003906       ║
+  ║ utf-16   ║ 44,496            ║ 0.000081            ║ 0.000028           ║ 73.400000        ║ 0.000000       ║
+  ║ utf-32   ║ 88,856            ║ 0.000102            ║ 0.000033           ║ 89.100000        ║ 0.000000       ║
+  ╚══════════╩═══════════════════╩═════════════════════╩════════════════════╩══════════════════╩════════════════╝
+
+
+
+
+
+    ╔════════════════════════════════════════════╗
+    ║                                            ║
+    ║  TEST 2: IN-MEMORY (CPU-BOUND) - RAW DATA  ║
+    ║                                            ║
+    ╚════════════════════════════════════════════╝
+
+  ► Dataset: English (ASCII-heavy)
+
+  ╔══════════╦══════════════════════╦══════════════════════╦══════════════════╦══════════════════╦══════════════════╗
+  ║ Encoding ║ Avg. Encode Time (s) ║ Avg. Decode Time (s) ║ Avg CPU Load (%) ║ Encode Peak (MB) ║ Decode Peak (MB) ║
+  ╠══════════╬══════════════════════╬══════════════════════╬══════════════════╬══════════════════╬══════════════════╣
+  ║ ascii    ║ 0.000371             ║ 0.000030             ║ 99.900000        ║ 0.825124         ║ 0.820642         ║
+  ║ utf-8    ║ 0.000370             ║ 0.000250             ║ 100.000000       ║ 2.475308         ║ 2.502179         ║
+  ║ utf-16   ║ 0.000219             ║ 0.000090             ║ 100.400000       ║ 1.650218         ║ 2.475371         ║
+  ║ utf-32   ║ 0.000352             ║ 0.000355             ║ 100.400000       ║ 3.300405         ║ 2.475371         ║
+  ╚══════════╩══════════════════════╩══════════════════════╩══════════════════╩══════════════════╩══════════════════╝
+
+
+  ► Dataset: Multilingual
+
+  ╔══════════╦══════════════════════╦══════════════════════╦══════════════════╦══════════════════╦══════════════════╗
+  ║ Encoding ║ Avg. Encode Time (s) ║ Avg. Decode Time (s) ║ Avg CPU Load (%) ║ Encode Peak (MB) ║ Decode Peak (MB) ║
+  ╠══════════╬══════════════════════╬══════════════════════╬══════════════════╬══════════════════╬══════════════════╣
+  ║ utf-8    ║ 0.000016             ║ 0.000005             ║ 97.900000        ║ 0.084767         ║ 0.128292         ║
+  ║ utf-16   ║ 0.000015             ║ 0.000008             ║ 89.000000        ║ 0.042466         ║ 0.127411         ║
+  ║ utf-32   ║ 0.000008             ║ 0.000011             ║ 104.800000       ║ 0.084771         ║ 0.127216         ║
+  ╚══════════╩══════════════════════╩══════════════════════╩══════════════════╩══════════════════╩══════════════════╝
+
+
+
+
+
+    ╔═══════════════════════════════╗
+    ║                               ║
+    ║  TEST 3: CPROFILE VALIDATION  ║
+    ║                               ║
+    ╚═══════════════════════════════╝
+
+  ► Profiler Report for: utf-8 (English Dataset)
+
+         2001 function calls in 0.629 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3 to 1 due to restriction <'encode'>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1000    0.379    0.000    0.379    0.000 {method 'encode' of 'str' objects}
+
+
+         2001 function calls in 0.629 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3 to 1 due to restriction <'decode'>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1000    0.250    0.000    0.250    0.000 {method 'decode' of 'bytes' objects}
+
+
+
+
+
+
+    ╔════════════════════════════════════════════════╗
+    ║                                                ║
+    ║  TEST 4: FINAL ANALYSIS REPORT (VS. BASELINE)  ║
+    ║                                                ║
+    ╚════════════════════════════════════════════════╝
+
+
+  --- Analysis for: File I/O ---
+  ► Dataset: English (ASCII-heavy)
+
+  ╔══════════╦═══════════╦═════════════╦══════════════╗
+  ║ Encoding ║ Metric    ║ Value       ║ vs. Baseline ║
+  ╠══════════╬═══════════╬═════════════╬══════════════╣
+  ║ ascii    ║ File Size ║ 860,465 B   ║ 98.4%        ║
+  ║ utf-8    ║ File Size ║ 874,542 B   ║ 100.0%       ║
+  ║ utf-16   ║ File Size ║ 1,730,346 B ║ 197.9%       ║
+  ║ utf-32   ║ File Size ║ 3,460,692 B ║ 395.7%       ║
+  ╚══════════╩═══════════╩═════════════╩══════════════╝
+
+
+  ► Dataset: Multilingual
+
+  ╔══════════╦═══════════╦══════════╦══════════════╗
+  ║ Encoding ║ Metric    ║ Value    ║ vs. Baseline ║
+  ╠══════════╬═══════════╬══════════╬══════════════╣
+  ║ utf-8    ║ File Size ║ 22,401 B ║ 100.0%       ║
+  ║ utf-16   ║ File Size ║ 44,496 B ║ 198.6%       ║
+  ║ utf-32   ║ File Size ║ 88,856 B ║ 396.7%       ║
+  ╚══════════╩═══════════╩══════════╩══════════════╝
+
+
+
+  --- Analysis for: In-Memory ---
+  ► Dataset: English (ASCII-heavy)
+
+  ╔══════════╦═════════════════╦══════════════╦══════════════╗
+  ║ Encoding ║ Metric          ║ Value        ║ vs. Baseline ║
+  ╠══════════╬═════════════════╬══════════════╬══════════════╣
+  ║ ascii    ║ Encode Time     ║ 0.00037073 s ║ 1.00x        ║
+  ║ ascii    ║ Decode Time     ║ 0.00002953 s ║ 8.48x        ║
+  ║ ascii    ║ Encode Peak Mem ║ 0.8251 MB    ║ 33.3%        ║
+  ║ ascii    ║ Decode Peak Mem ║ 0.8206 MB    ║ N/A          ║
+  ║ utf-8    ║ Encode Time     ║ 0.00036967 s ║ 1.00x        ║
+  ║ utf-8    ║ Decode Time     ║ 0.00025029 s ║ 1.00x        ║
+  ║ utf-8    ║ Encode Peak Mem ║ 2.4753 MB    ║ 100.0%       ║
+  ║ utf-8    ║ Decode Peak Mem ║ 2.5022 MB    ║ N/A          ║
+  ║ utf-16   ║ Encode Time     ║ 0.00021912 s ║ 1.69x        ║
+  ║ utf-16   ║ Decode Time     ║ 0.00008966 s ║ 2.79x        ║
+  ║ utf-16   ║ Encode Peak Mem ║ 1.6502 MB    ║ 66.7%        ║
+  ║ utf-16   ║ Decode Peak Mem ║ 2.4754 MB    ║ N/A          ║
+  ║ utf-32   ║ Encode Time     ║ 0.00035240 s ║ 1.05x        ║
+  ║ utf-32   ║ Decode Time     ║ 0.00035470 s ║ 0.71x        ║
+  ║ utf-32   ║ Encode Peak Mem ║ 3.3004 MB    ║ 133.3%       ║
+  ║ utf-32   ║ Decode Peak Mem ║ 2.4754 MB    ║ N/A          ║
+  ╚══════════╩═════════════════╩══════════════╩══════════════╝
+
+
+  ► Dataset: Multilingual
+
+  ╔══════════╦═════════════════╦══════════════╦══════════════╗
+  ║ Encoding ║ Metric          ║ Value        ║ vs. Baseline ║
+  ╠══════════╬═════════════════╬══════════════╬══════════════╣
+  ║ utf-8    ║ Encode Time     ║ 0.00001576 s ║ 1.00x        ║
+  ║ utf-8    ║ Decode Time     ║ 0.00000462 s ║ 1.00x        ║
+  ║ utf-8    ║ Encode Peak Mem ║ 0.0848 MB    ║ 100.0%       ║
+  ║ utf-8    ║ Decode Peak Mem ║ 0.1283 MB    ║ N/A          ║
+  ║ utf-16   ║ Encode Time     ║ 0.00001467 s ║ 1.07x        ║
+  ║ utf-16   ║ Decode Time     ║ 0.00000776 s ║ 0.60x        ║
+  ║ utf-16   ║ Encode Peak Mem ║ 0.0425 MB    ║ 50.1%        ║
+  ║ utf-16   ║ Decode Peak Mem ║ 0.1274 MB    ║ N/A          ║
+  ║ utf-32   ║ Encode Time     ║ 0.00000850 s ║ 1.85x        ║
+  ║ utf-32   ║ Decode Time     ║ 0.00001055 s ║ 0.44x        ║
+  ║ utf-32   ║ Encode Peak Mem ║ 0.0848 MB    ║ 100.0%       ║
+  ║ utf-32   ║ Decode Peak Mem ║ 0.1272 MB    ║ N/A          ║
+  ╚══════════╩═════════════════╩══════════════╩══════════════╝
+
+
+avyakths@pop-os ~/d/C/v/script_v5_sleekvisuals (main)> cd ../script_v6_stablecore/
+avyakths@pop-os ~/d/C/v/script_v6_stablecore (main)> python3 script_v6_stablecore.py
+
+
+
+  ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                                                                                                                             ║
+  ║  LOADING DATASET: ENGLISH (ASCII-HEAVY) (/HOME/AVYAKTHS/DEVELOPMENT/CHARACTER ENCODING ANALYSIS/VERSIONS/SCRIPT_V6_STABLECORE/../../USER_BENCH_FILES_FREESIZE/ENGLISH.TXT)  ║
+  ║                                                                                                                                                                             ║
+  ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+    ✓ Successfully loaded 865,172 characters (890,391 bytes).
+    Running Test Suite 1: File I/O (Disk-Bound)...
+    Running Test Suite 2: In-Memory (CPU-Bound)...
+    Running Test Suite 3: cProfile Validation (on utf-8)...
+
+
+
+  ╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                                                                                                                         ║
+  ║  LOADING DATASET: MULTILINGUAL (/HOME/AVYAKTHS/DEVELOPMENT/CHARACTER ENCODING ANALYSIS/VERSIONS/SCRIPT_V6_STABLECORE/../../USER_BENCH_FILES_FREESIZE/MULTILINGUAL.TXT)  ║
+  ║                                                                                                                                                                         ║
+  ╚═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+    ✓ Successfully loaded 22,213 characters (22,781 bytes).
+    Running Test Suite 1: File I/O (Disk-Bound)...
+    Running Test Suite 2: In-Memory (CPU-Bound)...
+
+  ✓ Successfully wrote raw I/O test log to: io_results.csv
+  ✓ Successfully wrote raw CPU test log to: cpu_results.csv
+
+
+
+  ╔════════════════════════════════════════════╗
+  ║                                            ║
+  ║  TEST 1: FILE I/O (DISK-BOUND) - RAW DATA  ║
+  ║                                            ║
+  ╚════════════════════════════════════════════╝
+
+    ► Dataset: English (ASCII-heavy)
+
+    ╔══════════╦═══════════════════╦═════════════════════╦════════════════════╦══════════════════╦════════════════╗
+    ║ Encoding ║ File Size (Bytes) ║ Avg. Write Time (s) ║ Avg. Read Time (s) ║ Avg CPU Load (%) ║ RAM Delta (MB) ║
+    ╠══════════╬═══════════════════╬═════════════════════╬════════════════════╬══════════════════╬════════════════╣
+    ║ ascii    ║ 860,465           ║ 0.00071294          ║ 0.00006798         ║ 83.2000          ║ 2.4609         ║
+    ║ utf-8    ║ 874,542           ║ 0.00070432          ║ 0.00064871         ║ 90.2000          ║ 1.0117         ║
+    ║ utf-16   ║ 1,730,346         ║ 0.00083859          ║ 0.00015660         ║ 75.4000          ║ 4.8359         ║
+    ║ utf-32   ║ 3,460,692         ║ 0.00139890          ║ 0.00046184         ║ 79.5000          ║ 6.4883         ║
+    ╚══════════╩═══════════════════╩═════════════════════╩════════════════════╩══════════════════╩════════════════╝
+
+
+    ► Dataset: Multilingual
+
+    ╔══════════╦═══════════════════╦═════════════════════╦════════════════════╦══════════════════╦════════════════╗
+    ║ Encoding ║ File Size (Bytes) ║ Avg. Write Time (s) ║ Avg. Read Time (s) ║ Avg CPU Load (%) ║ RAM Delta (MB) ║
+    ╠══════════╬═══════════════════╬═════════════════════╬════════════════════╬══════════════════╬════════════════╣
+    ║ utf-8    ║ 22,401            ║ 0.00007878          ║ 0.00002544         ║ 86.2000          ║ 0.0117         ║
+    ║ utf-16   ║ 44,496            ║ 0.00008301          ║ 0.00002880         ║ 89.4000          ║ 0.0000         ║
+    ║ utf-32   ║ 88,856            ║ 0.00010238          ║ 0.00003207         ║ 74.4000          ║ 0.0000         ║
+    ╚══════════╩═══════════════════╩═════════════════════╩════════════════════╩══════════════════╩════════════════╝
+
+
+
+
+
+  ╔════════════════════════════════════════════╗
+  ║                                            ║
+  ║  TEST 2: IN-MEMORY (CPU-BOUND) - RAW DATA  ║
+  ║                                            ║
+  ╚════════════════════════════════════════════╝
+
+    ► Dataset: English (ASCII-heavy)
+
+    ╔══════════╦══════════════════════╦══════════════════════╦══════════════════╦══════════════════╦══════════════════╗
+    ║ Encoding ║ Avg. Encode Time (s) ║ Avg. Decode Time (s) ║ Avg CPU Load (%) ║ Encode Peak (MB) ║ Decode Peak (MB) ║
+    ╠══════════╬══════════════════════╬══════════════════════╬══════════════════╬══════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00036931           ║ 0.00002960           ║ 100.3000         ║ 0.8251           ║ 0.8206           ║
+    ║ utf-8    ║ 0.00036784           ║ 0.00024876           ║ 98.9000          ║ 2.4753           ║ 2.5022           ║
+    ║ utf-16   ║ 0.00021881           ║ 0.00008915           ║ 100.6000         ║ 1.6502           ║ 2.4754           ║
+    ║ utf-32   ║ 0.00034998           ║ 0.00035249           ║ 99.6000          ║ 3.3004           ║ 2.4754           ║
+    ╚══════════╩══════════════════════╩══════════════════════╩══════════════════╩══════════════════╩══════════════════╝
+
+
+    ► Dataset: Multilingual
+
+    ╔══════════╦══════════════════════╦══════════════════════╦══════════════════╦══════════════════╦══════════════════╗
+    ║ Encoding ║ Avg. Encode Time (s) ║ Avg. Decode Time (s) ║ Avg CPU Load (%) ║ Encode Peak (MB) ║ Decode Peak (MB) ║
+    ╠══════════╬══════════════════════╬══════════════════════╬══════════════════╬══════════════════╬══════════════════╣
+    ║ utf-8    ║ 0.00001677           ║ 0.00000474           ║ 92.8000          ║ 0.0848           ║ 0.1283           ║
+    ║ utf-16   ║ 0.00001459           ║ 0.00000756           ║ 90.1000          ║ 0.0425           ║ 0.1274           ║
+    ║ utf-32   ║ 0.00000854           ║ 0.00001028           ║ 106.1000         ║ 0.0848           ║ 0.1272           ║
+    ╚══════════╩══════════════════════╩══════════════════════╩══════════════════╩══════════════════╩══════════════════╝
+
+
+
+
+
+  ╔═══════════════════════════════╗
+  ║                               ║
+  ║  TEST 3: CPROFILE VALIDATION  ║
+  ║                               ║
+  ╚═══════════════════════════════╝
+
+    ╔═[ Profiler Report for: utf-8 (English Dataset) ]═════════════════════════════════════╗
+    ║ 2001 function calls in 0.627 seconds                                               ║
+    ║                                                                                    ║
+    ║    Ordered by: cumulative time                                                     ║
+    ║    List reduced from 3 to 1 due to restriction <'encode'>                          ║
+    ║                                                                                    ║
+    ║    ncalls  tottime  percall  cumtime  percall filename:lineno(function)            ║
+    ║      1000    0.377    0.000    0.377    0.000 {method 'encode' of 'str' objects}   ║
+    ║                                                                                    ║
+    ║                                                                                    ║
+    ║          2001 function calls in 0.627 seconds                                      ║
+    ║                                                                                    ║
+    ║    Ordered by: cumulative time                                                     ║
+    ║    List reduced from 3 to 1 due to restriction <'decode'>                          ║
+    ║                                                                                    ║
+    ║    ncalls  tottime  percall  cumtime  percall filename:lineno(function)            ║
+    ║      1000    0.250    0.000    0.250    0.000 {method 'decode' of 'bytes' objects} ║
+    ╚════════════════════════════════════════════════════════════════════════════════════╝
+
+
+
+
+  ╔════════════════════════════════════════════════╗
+  ║                                                ║
+  ║  TEST 4: FINAL ANALYSIS REPORT (VS. BASELINE)  ║
+  ║                                                ║
+  ╚════════════════════════════════════════════════╝
+
+    ► Dataset: English (ASCII-heavy) - File I/O Analysis
+
+    ╔══════════╦═══════════════╦═════════════════╗
+    ║ Encoding ║ File Size (B) ║ Size (vs. Base) ║
+    ╠══════════╬═══════════════╬═════════════════╣
+    ║ ascii    ║ 860,465       ║ 98.4%           ║
+    ║ utf-8    ║ 874,542       ║ 100.0%          ║
+    ║ utf-16   ║ 1,730,346     ║ 197.9%          ║
+    ║ utf-32   ║ 3,460,692     ║ 395.7%          ║
+    ╚══════════╩═══════════════╩═════════════════╝
+
+
+    ► Dataset: English (ASCII-heavy) - In-Memory CPU Analysis
+
+    ╔══════════╦═════════════════╦═══════════════════╦═════════════════╦═══════════════════╦══════════════════╦═══════════════════════╦══════════════════╗
+    ║ Encoding ║ Encode Time (s) ║ Encode (vs. Base) ║ Decode Time (s) ║ Decode (vs. Base) ║ Encode Peak (MB) ║ Encode Mem (vs. Base) ║ Decode Peak (MB) ║
+    ╠══════════╬═════════════════╬═══════════════════╬═════════════════╬═══════════════════╬══════════════════╬═══════════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00036931      ║ 1.00x             ║ 0.00002960      ║ 8.41x             ║ 0.8251           ║ 33.3%                 ║ 0.8206           ║
+    ║ utf-8    ║ 0.00036784      ║ 1.00x             ║ 0.00024876      ║ 1.00x             ║ 2.4753           ║ 100.0%                ║ 2.5022           ║
+    ║ utf-16   ║ 0.00021881      ║ 1.68x             ║ 0.00008915      ║ 2.79x             ║ 1.6502           ║ 66.7%                 ║ 2.4754           ║
+    ║ utf-32   ║ 0.00034998      ║ 1.05x             ║ 0.00035249      ║ 0.71x             ║ 3.3004           ║ 133.3%                ║ 2.4754           ║
+    ╚══════════╩═════════════════╩═══════════════════╩═════════════════╩═══════════════════╩══════════════════╩═══════════════════════╩══════════════════╝
+
+
+    ► Dataset: Multilingual - File I/O Analysis
+
+    ╔══════════╦═══════════════╦═════════════════╗
+    ║ Encoding ║ File Size (B) ║ Size (vs. Base) ║
+    ╠══════════╬═══════════════╬═════════════════╣
+    ║ utf-8    ║ 22,401        ║ 100.0%          ║
+    ║ utf-16   ║ 44,496        ║ 198.6%          ║
+    ║ utf-32   ║ 88,856        ║ 396.7%          ║
+    ╚══════════╩═══════════════╩═════════════════╝
+
+
+    ► Dataset: Multilingual - In-Memory CPU Analysis
+
+    ╔══════════╦═════════════════╦═══════════════════╦═════════════════╦═══════════════════╦══════════════════╦═══════════════════════╦══════════════════╗
+    ║ Encoding ║ Encode Time (s) ║ Encode (vs. Base) ║ Decode Time (s) ║ Decode (vs. Base) ║ Encode Peak (MB) ║ Encode Mem (vs. Base) ║ Decode Peak (MB) ║
+    ╠══════════╬═════════════════╬═══════════════════╬═════════════════╬═══════════════════╬══════════════════╬═══════════════════════╬══════════════════╣
+    ║ utf-8    ║ 0.00001677      ║ 1.00x             ║ 0.00000474      ║ 1.00x             ║ 0.0848           ║ 100.0%                ║ 0.1283           ║
+    ║ utf-16   ║ 0.00001459      ║ 1.15x             ║ 0.00000756      ║ 0.63x             ║ 0.0425           ║ 50.1%                 ║ 0.1274           ║
+    ║ utf-32   ║ 0.00000854      ║ 1.96x             ║ 0.00001028      ║ 0.46x             ║ 0.0848           ║ 100.0%                ║ 0.1272           ║
+    ╚══════════╩═════════════════╩═══════════════════╩═════════════════╩═══════════════════╩══════════════════╩═══════════════════════╩══════════════════╝
+
+
+
+[+] Analysis complete. Full report saved to 'analysis_report.txt'
+avyakths@pop-os ~/d/C/v/script_v6_stablecore (main)> cd ../script_v7_versatilitymeansutility/
+avyakths@pop-os ~/d/C/v/script_v7_versatilitymeansutility (main)> python3 script_v7_versatilitymeansutility.py
+--- Auto-Detecting Datasets ---
+  ✓ Found 4 dataset(s): /home/avyakths/development/Character Encoding Analysis/versions/script_v7_versatilitymeansutility/../../user_bench_files_freesize/cjk_journey.txt, /home/avyakths/development/Character Encoding Analysis/versions/script_v7_versatilitymeansutility/../../user_bench_files_freesize/english.txt, /home/avyakths/development/Character Encoding Analysis/versions/script_v7_versatilitymeansutility/../../user_bench_files_freesize/multilingual.txt, /home/avyakths/development/Character Encoding Analysis/versions/script_v7_versatilitymeansutility/../../user_bench_files_freesize/emoji-test.txt
+
+
+
+
+  ╔════════════════════════════════════╗
+  ║                                    ║
+  ║  LOADING DATASET: CJK_JOURNEY.TXT  ║
+  ║                                    ║
+  ╚════════════════════════════════════╝
+
+    ✓ Successfully loaded 777,334 characters (2,264,110 bytes).
+    ► File contains non-ASCII characters.
+
+    Running Test Suite 1: File I/O (Disk-Bound)...
+    Running Test Suite 2: In-Memory (CPU-Bound)...
+    Running Test Suite 3: cProfile Validation (on utf-8)...
+
+
+
+  ╔═══════════════════════════════════╗
+  ║                                   ║
+  ║  LOADING DATASET: EMOJI-TEST.TXT  ║
+  ║                                   ║
+  ╚═══════════════════════════════════╝
+
+    ✓ Successfully loaded 597,030 characters (640,215 bytes).
+    ► File contains non-ASCII characters.
+
+    Running Test Suite 1: File I/O (Disk-Bound)...
+    Running Test Suite 2: In-Memory (CPU-Bound)...
+
+
+
+  ╔════════════════════════════════╗
+  ║                                ║
+  ║  LOADING DATASET: ENGLISH.TXT  ║
+  ║                                ║
+  ╚════════════════════════════════╝
+
+    ✓ Successfully loaded 865,172 characters (890,391 bytes).
+    ► File contains non-ASCII characters.
+
+    Running Test Suite 1: File I/O (Disk-Bound)...
+    Running Test Suite 2: In-Memory (CPU-Bound)...
+
+
+
+  ╔═════════════════════════════════════╗
+  ║                                     ║
+  ║  LOADING DATASET: MULTILINGUAL.TXT  ║
+  ║                                     ║
+  ╚═════════════════════════════════════╝
+
+    ✓ Successfully loaded 22,213 characters (22,781 bytes).
+    ► File contains non-ASCII characters.
+
+    Running Test Suite 1: File I/O (Disk-Bound)...
+    Running Test Suite 2: In-Memory (CPU-Bound)...
+
+  ✓ Successfully wrote raw I/O test log to: io_results.csv
+  ✓ Successfully wrote raw CPU test log to: cpu_results.csv
+
+
+
+  ╔════════════════════════════════════════════╗
+  ║                                            ║
+  ║  TEST 1: FILE I/O (DISK-BOUND) - RAW DATA  ║
+  ║                                            ║
+  ╚════════════════════════════════════════════╝
+
+    ► Dataset: cjk_journey.txt
+
+    ╔══════════╦═══════════════════╦═════════════════════╦════════════════════╦══════════════════╦════════════════╗
+    ║ Encoding ║ File Size (Bytes) ║ Avg. Write Time (s) ║ Avg. Read Time (s) ║ Avg CPU Load (%) ║ RAM Delta (MB) ║
+    ╠══════════╬═══════════════════╬═════════════════════╬════════════════════╬══════════════════╬════════════════╣
+    ║ ascii    ║ 47,697            ║ 0.00032888          ║ 0.00001054         ║ 94.2000          ║ 0.0078         ║
+    ║ utf-8    ║ 2,236,608         ║ 0.00213942          ║ 0.00263495         ║ 94.0000          ║ 5.1328         ║
+    ║ utf-16   ║ 1,554,670         ║ 0.00133615          ║ 0.00149997         ║ 91.7000          ║ 1.4922         ║
+    ║ utf-32   ║ 3,109,340         ║ 0.00130425          ║ 0.00142849         ║ 86.7000          ║ 5.0820         ║
+    ╚══════════╩═══════════════════╩═════════════════════╩════════════════════╩══════════════════╩════════════════╝
+
+
+    ► Dataset: emoji-test.txt
+
+    ╔══════════╦═══════════════════╦═════════════════════╦════════════════════╦══════════════════╦════════════════╗
+    ║ Encoding ║ File Size (Bytes) ║ Avg. Write Time (s) ║ Avg. Read Time (s) ║ Avg CPU Load (%) ║ RAM Delta (MB) ║
+    ╠══════════╬═══════════════════╬═════════════════════╬════════════════════╬══════════════════╬════════════════╣
+    ║ ascii    ║ 580,190           ║ 0.00044656          ║ 0.00004859         ║ 82.8000          ║ 0.0156         ║
+    ║ utf-8    ║ 640,215           ║ 0.00066546          ║ 0.00051169         ║ 90.0000          ║ 2.7266         ║
+    ║ utf-16   ║ 1,213,104         ║ 0.00088549          ║ 0.00136760         ║ 91.9000          ║ 2.2773         ║
+    ║ utf-32   ║ 2,388,124         ║ 0.00106204          ║ 0.00143459         ║ 86.9000          ║ 0.0000         ║
+    ╚══════════╩═══════════════════╩═════════════════════╩════════════════════╩══════════════════╩════════════════╝
+
+
+    ► Dataset: english.txt
+
+    ╔══════════╦═══════════════════╦═════════════════════╦════════════════════╦══════════════════╦════════════════╗
+    ║ Encoding ║ File Size (Bytes) ║ Avg. Write Time (s) ║ Avg. Read Time (s) ║ Avg CPU Load (%) ║ RAM Delta (MB) ║
+    ╠══════════╬═══════════════════╬═════════════════════╬════════════════════╬══════════════════╬════════════════╣
+    ║ ascii    ║ 860,465           ║ 0.00071500          ║ 0.00006788         ║ 83.0000          ║ 0.0039         ║
+    ║ utf-8    ║ 874,542           ║ 0.00071861          ║ 0.00030061         ║ 86.3000          ║ 1.6211         ║
+    ║ utf-16   ║ 1,730,346         ║ 0.00085407          ║ 0.00015858         ║ 74.1000          ║ 0.0000         ║
+    ║ utf-32   ║ 3,460,692         ║ 0.00165907          ║ 0.00046725         ║ 72.4000          ║ 1.6445         ║
+    ╚══════════╩═══════════════════╩═════════════════════╩════════════════════╩══════════════════╩════════════════╝
+
+
+    ► Dataset: multilingual.txt
+
+    ╔══════════╦═══════════════════╦═════════════════════╦════════════════════╦══════════════════╦════════════════╗
+    ║ Encoding ║ File Size (Bytes) ║ Avg. Write Time (s) ║ Avg. Read Time (s) ║ Avg CPU Load (%) ║ RAM Delta (MB) ║
+    ╠══════════╬═══════════════════╬═════════════════════╬════════════════════╬══════════════════╬════════════════╣
+    ║ ascii    ║ 22,133            ║ 0.00007360          ║ 0.00000942         ║ 72.2000          ║ 0.0078         ║
+    ║ utf-8    ║ 22,401            ║ 0.00007379          ║ 0.00002456         ║ 91.5000          ║ 0.3125         ║
+    ║ utf-16   ║ 44,496            ║ 0.00008157          ║ 0.00002821         ║ 81.9000          ║ 0.0195         ║
+    ║ utf-32   ║ 88,856            ║ 0.00010134          ║ 0.00004005         ║ 77.8000          ║ 0.0430         ║
+    ╚══════════╩═══════════════════╩═════════════════════╩════════════════════╩══════════════════╩════════════════╝
+
+
+
+
+
+  ╔════════════════════════════════════════════╗
+  ║                                            ║
+  ║  TEST 2: IN-MEMORY (CPU-BOUND) - RAW DATA  ║
+  ║                                            ║
+  ╚════════════════════════════════════════════╝
+
+    ► Dataset: cjk_journey.txt
+
+    ╔══════════╦══════════════════════╦══════════════════════╦══════════════════╦══════════════════╦══════════════════╗
+    ║ Encoding ║ Avg. Encode Time (s) ║ Avg. Decode Time (s) ║ Avg CPU Load (%) ║ Encode Peak (MB) ║ Decode Peak (MB) ║
+    ╠══════════╬══════════════════════╬══════════════════════╬══════════════════╬══════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00023981           ║ 0.00000169           ║ 103.5000         ║ 0.7414           ║ 0.0455           ║
+    ║ utf-8    ║ 0.00066157           ║ 0.00140644           ║ 100.1000         ║ 2.2240           ║ 6.3991           ║
+    ║ utf-16   ║ 0.00076350           ║ 0.00064738           ║ 99.9000          ║ 1.4827           ║ 2.2241           ║
+    ║ utf-32   ║ 0.00031624           ║ 0.00032014           ║ 99.0000          ║ 2.9653           ║ 2.2241           ║
+    ╚══════════╩══════════════════════╩══════════════════════╩══════════════════╩══════════════════╩══════════════════╝
+
+
+    ► Dataset: emoji-test.txt
+
+    ╔══════════╦══════════════════════╦══════════════════════╦══════════════════╦══════════════════╦══════════════════╗
+    ║ Encoding ║ Avg. Encode Time (s) ║ Avg. Decode Time (s) ║ Avg CPU Load (%) ║ Encode Peak (MB) ║ Decode Peak (MB) ║
+    ╠══════════╬══════════════════════╬══════════════════════╬══════════════════╬══════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00019791           ║ 0.00001997           ║ 100.9000         ║ 0.5694           ║ 0.5534           ║
+    ║ utf-8    ║ 0.00039006           ║ 0.00015835           ║ 100.3000         ║ 2.2775           ║ 3.6635           ║
+    ║ utf-16   ║ 0.00041774           ║ 0.00022749           ║ 99.2000          ║ 1.1569           ║ 3.4708           ║
+    ║ utf-32   ║ 0.00024152           ║ 0.00024847           ║ 98.0000          ║ 2.2775           ║ 3.4163           ║
+    ╚══════════╩══════════════════════╩══════════════════════╩══════════════════╩══════════════════╩══════════════════╝
+
+
+    ► Dataset: english.txt
+
+    ╔══════════╦══════════════════════╦══════════════════════╦══════════════════╦══════════════════╦══════════════════╗
+    ║ Encoding ║ Avg. Encode Time (s) ║ Avg. Decode Time (s) ║ Avg CPU Load (%) ║ Encode Peak (MB) ║ Decode Peak (MB) ║
+    ╠══════════╬══════════════════════╬══════════════════════╬══════════════════╬══════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00037174           ║ 0.00002976           ║ 99.6000          ║ 0.8251           ║ 0.8206           ║
+    ║ utf-8    ║ 0.00037141           ║ 0.00024858           ║ 100.0000         ║ 2.4753           ║ 2.5022           ║
+    ║ utf-16   ║ 0.00022014           ║ 0.00008900           ║ 97.0000          ║ 1.6502           ║ 2.4754           ║
+    ║ utf-32   ║ 0.00035132           ║ 0.00035708           ║ 100.2000         ║ 3.3004           ║ 2.4754           ║
+    ╚══════════╩══════════════════════╩══════════════════════╩══════════════════╩══════════════════╩══════════════════╝
+
+
+    ► Dataset: multilingual.txt
+
+    ╔══════════╦══════════════════════╦══════════════════════╦══════════════════╦══════════════════╦══════════════════╗
+    ║ Encoding ║ Avg. Encode Time (s) ║ Avg. Decode Time (s) ║ Avg CPU Load (%) ║ Encode Peak (MB) ║ Decode Peak (MB) ║
+    ╠══════════╬══════════════════════╬══════════════════════╬══════════════════╬══════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00000959           ║ 0.00000089           ║ 189.7000         ║ 0.0212           ║ 0.0211           ║
+    ║ utf-8    ║ 0.00001438           ║ 0.00000459           ║ 52.6000          ║ 0.0848           ║ 0.1283           ║
+    ║ utf-16   ║ 0.00001452           ║ 0.00000753           ║ 135.9000         ║ 0.0425           ║ 0.1274           ║
+    ║ utf-32   ║ 0.00000848           ║ 0.00001018           ║ 53.5000          ║ 0.0848           ║ 0.1272           ║
+    ╚══════════╩══════════════════════╩══════════════════════╩══════════════════╩══════════════════╩══════════════════╝
+
+
+
+
+
+  ╔═══════════════════════════════╗
+  ║                               ║
+  ║  TEST 3: CPROFILE VALIDATION  ║
+  ║                               ║
+  ╚═══════════════════════════════╝
+
+    ╔═[ Profiler Report for: utf-8 (cjk_journey.txt) ]═════════════════════════════════════╗
+    ║ 2001 function calls in 2.013 seconds                                               ║
+    ║                                                                                    ║
+    ║    Ordered by: cumulative time                                                     ║
+    ║    List reduced from 3 to 1 due to restriction <'encode'>                          ║
+    ║                                                                                    ║
+    ║    ncalls  tottime  percall  cumtime  percall filename:lineno(function)            ║
+    ║      1000    0.668    0.001    0.668    0.001 {method 'encode' of 'str' objects}   ║
+    ║                                                                                    ║
+    ║                                                                                    ║
+    ║          2001 function calls in 2.013 seconds                                      ║
+    ║                                                                                    ║
+    ║    Ordered by: cumulative time                                                     ║
+    ║    List reduced from 3 to 1 due to restriction <'decode'>                          ║
+    ║                                                                                    ║
+    ║    ncalls  tottime  percall  cumtime  percall filename:lineno(function)            ║
+    ║      1000    1.345    0.001    1.345    0.001 {method 'decode' of 'bytes' objects} ║
+    ╚════════════════════════════════════════════════════════════════════════════════════╝
+
+
+
+
+  ╔════════════════════════════════════════════════╗
+  ║                                                ║
+  ║  TEST 4: FINAL ANALYSIS REPORT (VS. BASELINE)  ║
+  ║                                                ║
+  ╚════════════════════════════════════════════════╝
+
+    ► Dataset: cjk_journey.txt - File I/O Analysis
+
+    ╔══════════╦═══════════════════════╦═════════════════╗
+    ║ Encoding ║ File Size             ║ Size (vs. Base) ║
+    ╠══════════╬═══════════════════════╬═════════════════╣
+    ║ ascii    ║ 47,697 B (Data Loss!) ║ 2.1%            ║
+    ║ utf-8    ║ 2,236,608 B           ║ 100.0%          ║
+    ║ utf-16   ║ 1,554,670 B           ║ 69.5%           ║
+    ║ utf-32   ║ 3,109,340 B           ║ 139.0%          ║
+    ╚══════════╩═══════════════════════╩═════════════════╝
+
+
+    ► Dataset: cjk_journey.txt - In-Memory CPU Analysis
+
+    ╔══════════╦═════════════════╦═══════════════════╦═════════════════╦═══════════════════╦══════════════════╦═══════════════════════╦══════════════════╗
+    ║ Encoding ║ Encode Time (s) ║ Encode (vs. Base) ║ Decode Time (s) ║ Decode (vs. Base) ║ Encode Peak (MB) ║ Encode Mem (vs. Base) ║ Decode Peak (MB) ║
+    ╠══════════╬═════════════════╬═══════════════════╬═════════════════╬═══════════════════╬══════════════════╬═══════════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00023981      ║ 2.76x             ║ 0.00000169      ║ 832.41x           ║ 0.7414           ║ 33.3%                 ║ 0.0455           ║
+    ║ utf-8    ║ 0.00066157      ║ 1.00x             ║ 0.00140644      ║ 1.00x             ║ 2.2240           ║ 100.0%                ║ 6.3991           ║
+    ║ utf-16   ║ 0.00076350      ║ 0.87x             ║ 0.00064738      ║ 2.17x             ║ 1.4827           ║ 66.7%                 ║ 2.2241           ║
+    ║ utf-32   ║ 0.00031624      ║ 2.09x             ║ 0.00032014      ║ 4.39x             ║ 2.9653           ║ 133.3%                ║ 2.2241           ║
+    ╚══════════╩═════════════════╩═══════════════════╩═════════════════╩═══════════════════╩══════════════════╩═══════════════════════╩══════════════════╝
+
+
+    ► Dataset: emoji-test.txt - File I/O Analysis
+
+    ╔══════════╦════════════════════════╦═════════════════╗
+    ║ Encoding ║ File Size              ║ Size (vs. Base) ║
+    ╠══════════╬════════════════════════╬═════════════════╣
+    ║ ascii    ║ 580,190 B (Data Loss!) ║ 90.6%           ║
+    ║ utf-8    ║ 640,215 B              ║ 100.0%          ║
+    ║ utf-16   ║ 1,213,104 B            ║ 189.5%          ║
+    ║ utf-32   ║ 2,388,124 B            ║ 373.0%          ║
+    ╚══════════╩════════════════════════╩═════════════════╝
+
+
+    ► Dataset: emoji-test.txt - In-Memory CPU Analysis
+
+    ╔══════════╦═════════════════╦═══════════════════╦═════════════════╦═══════════════════╦══════════════════╦═══════════════════════╦══════════════════╗
+    ║ Encoding ║ Encode Time (s) ║ Encode (vs. Base) ║ Decode Time (s) ║ Decode (vs. Base) ║ Encode Peak (MB) ║ Encode Mem (vs. Base) ║ Decode Peak (MB) ║
+    ╠══════════╬═════════════════╬═══════════════════╬═════════════════╬═══════════════════╬══════════════════╬═══════════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00019791      ║ 1.97x             ║ 0.00001997      ║ 7.93x             ║ 0.5694           ║ 25.0%                 ║ 0.5534           ║
+    ║ utf-8    ║ 0.00039006      ║ 1.00x             ║ 0.00015835      ║ 1.00x             ║ 2.2775           ║ 100.0%                ║ 3.6635           ║
+    ║ utf-16   ║ 0.00041774      ║ 0.93x             ║ 0.00022749      ║ 0.70x             ║ 1.1569           ║ 50.8%                 ║ 3.4708           ║
+    ║ utf-32   ║ 0.00024152      ║ 1.62x             ║ 0.00024847      ║ 0.64x             ║ 2.2775           ║ 100.0%                ║ 3.4163           ║
+    ╚══════════╩═════════════════╩═══════════════════╩═════════════════╩═══════════════════╩══════════════════╩═══════════════════════╩══════════════════╝
+
+
+    ► Dataset: english.txt - File I/O Analysis
+
+    ╔══════════╦════════════════════════╦═════════════════╗
+    ║ Encoding ║ File Size              ║ Size (vs. Base) ║
+    ╠══════════╬════════════════════════╬═════════════════╣
+    ║ ascii    ║ 860,465 B (Data Loss!) ║ 98.4%           ║
+    ║ utf-8    ║ 874,542 B              ║ 100.0%          ║
+    ║ utf-16   ║ 1,730,346 B            ║ 197.9%          ║
+    ║ utf-32   ║ 3,460,692 B            ║ 395.7%          ║
+    ╚══════════╩════════════════════════╩═════════════════╝
+
+
+    ► Dataset: english.txt - In-Memory CPU Analysis
+
+    ╔══════════╦═════════════════╦═══════════════════╦═════════════════╦═══════════════════╦══════════════════╦═══════════════════════╦══════════════════╗
+    ║ Encoding ║ Encode Time (s) ║ Encode (vs. Base) ║ Decode Time (s) ║ Decode (vs. Base) ║ Encode Peak (MB) ║ Encode Mem (vs. Base) ║ Decode Peak (MB) ║
+    ╠══════════╬═════════════════╬═══════════════════╬═════════════════╬═══════════════════╬══════════════════╬═══════════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00037174      ║ 1.00x             ║ 0.00002976      ║ 8.35x             ║ 0.8251           ║ 33.3%                 ║ 0.8206           ║
+    ║ utf-8    ║ 0.00037141      ║ 1.00x             ║ 0.00024858      ║ 1.00x             ║ 2.4753           ║ 100.0%                ║ 2.5022           ║
+    ║ utf-16   ║ 0.00022014      ║ 1.69x             ║ 0.00008900      ║ 2.79x             ║ 1.6502           ║ 66.7%                 ║ 2.4754           ║
+    ║ utf-32   ║ 0.00035132      ║ 1.06x             ║ 0.00035708      ║ 0.70x             ║ 3.3004           ║ 133.3%                ║ 2.4754           ║
+    ╚══════════╩═════════════════╩═══════════════════╩═════════════════╩═══════════════════╩══════════════════╩═══════════════════════╩══════════════════╝
+
+
+    ► Dataset: multilingual.txt - File I/O Analysis
+
+    ╔══════════╦═══════════════════════╦═════════════════╗
+    ║ Encoding ║ File Size             ║ Size (vs. Base) ║
+    ╠══════════╬═══════════════════════╬═════════════════╣
+    ║ ascii    ║ 22,133 B (Data Loss!) ║ 98.8%           ║
+    ║ utf-8    ║ 22,401 B              ║ 100.0%          ║
+    ║ utf-16   ║ 44,496 B              ║ 198.6%          ║
+    ║ utf-32   ║ 88,856 B              ║ 396.7%          ║
+    ╚══════════╩═══════════════════════╩═════════════════╝
+
+
+    ► Dataset: multilingual.txt - In-Memory CPU Analysis
+
+    ╔══════════╦═════════════════╦═══════════════════╦═════════════════╦═══════════════════╦══════════════════╦═══════════════════════╦══════════════════╗
+    ║ Encoding ║ Encode Time (s) ║ Encode (vs. Base) ║ Decode Time (s) ║ Decode (vs. Base) ║ Encode Peak (MB) ║ Encode Mem (vs. Base) ║ Decode Peak (MB) ║
+    ╠══════════╬═════════════════╬═══════════════════╬═════════════════╬═══════════════════╬══════════════════╬═══════════════════════╬══════════════════╣
+    ║ ascii    ║ 0.00000959      ║ 1.50x             ║ 0.00000089      ║ 5.12x             ║ 0.0212           ║ 25.0%                 ║ 0.0211           ║
+    ║ utf-8    ║ 0.00001438      ║ 1.00x             ║ 0.00000459      ║ 1.00x             ║ 0.0848           ║ 100.0%                ║ 0.1283           ║
+    ║ utf-16   ║ 0.00001452      ║ 0.99x             ║ 0.00000753      ║ 0.61x             ║ 0.0425           ║ 50.1%                 ║ 0.1274           ║
+    ║ utf-32   ║ 0.00000848      ║ 1.69x             ║ 0.00001018      ║ 0.45x             ║ 0.0848           ║ 100.0%                ║ 0.1272           ║
+    ╚══════════╩═════════════════╩═══════════════════╩═════════════════╩═══════════════════╩══════════════════╩═══════════════════════╩══════════════════╝
+
+
+
+[+] Analysis complete. Full report saved to 'analysis_report.txt'
+avyakths@pop-os ~/d/C/v/script_v7_versatilitymeansutility (main)> cd ../script_v8_fulltestsuite/
+avyakths@pop-os ~/d/C/v/script_v8_fulltestsuite (main)> python3 script_v8_fulltestsuite.py
+
+
+
+  ╔═════════════════════════════════╗
+  ║  ENCODING BENCHMARK SUITE V8.0  ║
+  ╚═════════════════════════════════╝
+
+--- Checking Datasets ---
+  ► Ready to benchmark 4 standardized files.
+
+► Benchmarking: cjk_journey_bench.txt
+► Benchmarking: english_bench.txt
+► Benchmarking: multilingual_bench.txt
+► Benchmarking: emoji-test_bench.txt
+
+
+
+  ╔═════════════════════════╗
+  ║  FINAL ANALYSIS REPORT  ║
+  ╚═════════════════════════╝
+
+    ► cjk_journey_bench.txt - Storage & I/O
+
+    ╔══════════╦════════════╦═══════════════╦══════════════╦══════════════╦════════════════╦══════════════╗
+    ║ Encoding ║ File Size  ║ Avg Write (s) ║ Avg Read (s) ║ CPU (%)      ║ RAM Delta (MB) ║ Size vs Base ║
+    ╠══════════╬════════════╬═══════════════╬══════════════╬══════════════╬════════════════╬══════════════╣
+    ║ ascii    ║ 0 (Loss!)  ║ 0.00143929    ║ 0.00000714   ║ 100.20000000 ║ 0.0156         ║ 0.0%         ║
+    ║ utf-8    ║ 21,193,920 ║ 0.01336921    ║ 0.03428985   ║ 94.30000000  ║ 47.1641        ║ 100.0%       ║
+    ║ utf-16   ║ 14,129,282 ║ 0.00941578    ║ 0.02473647   ║ 88.40000000  ║ 40.3164        ║ 66.7%        ║
+    ║ utf-32   ║ 28,258,564 ║ 0.01311626    ║ 0.02681762   ║ 90.40000000  ║ 53.7852        ║ 133.3%       ║
+    ╚══════════╩════════════╩═══════════════╩══════════════╩══════════════╩════════════════╩══════════════╝
+
+
+    ► cjk_journey_bench.txt - CPU & Memory
+
+    ╔══════════╦════════════════╦════════════════╦══════════════╦═══════════════╦═══════════════╦═════════════╦═════════════╦═════════════╗
+    ║ Encoding ║ Avg Encode (s) ║ Avg Decode (s) ║ CPU (%)      ║ Peak Enc (MB) ║ Peak Dec (MB) ║ Enc vs Base ║ Dec vs Base ║ Mem vs Base ║
+    ╠══════════╬════════════════╬════════════════╬══════════════╬═══════════════╬═══════════════╬═════════════╬═════════════╬═════════════╣
+    ║ ascii    ║ 0.00141106     ║ 0.00000004     ║ 99.90000000  ║ 6.7374        ║ 0.0000        ║ 4.11x       ║ 383512.08x  ║ 33.3%       ║
+    ║ utf-8    ║ 0.00580202     ║ 0.01405533     ║ 100.00000000 ║ 20.2121       ║ 60.6364       ║ 1.00x       ║ 1.00x       ║ 100.0%      ║
+    ║ utf-16   ║ 0.00183036     ║ 0.00632053     ║ 100.00000000 ║ 13.4748       ║ 20.2122       ║ 3.17x       ║ 2.22x       ║ 66.7%       ║
+    ║ utf-32   ║ 0.00289118     ║ 0.00291876     ║ 100.00000000 ║ 26.9495       ║ 20.2122       ║ 2.01x       ║ 4.82x       ║ 133.3%      ║
+    ╚══════════╩════════════════╩════════════════╩══════════════╩═══════════════╩═══════════════╩═════════════╩═════════════╩═════════════╝
+
+
+    ► emoji-test_bench.txt - Storage & I/O
+
+    ╔══════════╦════════════════════╦═══════════════╦══════════════╦═════════════╦════════════════╦══════════════╗
+    ║ Encoding ║ File Size          ║ Avg Write (s) ║ Avg Read (s) ║ CPU (%)     ║ RAM Delta (MB) ║ Size vs Base ║
+    ╠══════════╬════════════════════╬═══════════════╬══════════════╬═════════════╬════════════════╬══════════════╣
+    ║ ascii    ║ 20,738,621 (Loss!) ║ 0.01366167    ║ 0.00346809   ║ 84.90000000 ║ 39.4375        ║ 98.8%        ║
+    ║ utf-8    ║ 20,989,737         ║ 0.03048466    ║ 0.13751684   ║ 98.70000000 ║ 99.2969        ║ 100.0%       ║
+    ║ utf-16   ║ 41,690,880         ║ 0.03646442    ║ 0.14768511   ║ 93.80000000 ║ 59.5039        ║ 198.6%       ║
+    ║ utf-32   ║ 83,254,328         ║ 0.08376091    ║ 0.16618838   ║ 91.60000000 ║ 79.4023        ║ 396.6%       ║
+    ╚══════════╩════════════════════╩═══════════════╩══════════════╩═════════════╩════════════════╩══════════════╝
+
+
+    ► emoji-test_bench.txt - CPU & Memory
+
+    ╔══════════╦════════════════╦════════════════╦══════════════╦═══════════════╦═══════════════╦═════════════╦═════════════╦═════════════╗
+    ║ Encoding ║ Avg Encode (s) ║ Avg Decode (s) ║ CPU (%)      ║ Peak Enc (MB) ║ Peak Dec (MB) ║ Enc vs Base ║ Dec vs Base ║ Mem vs Base ║
+    ╠══════════╬════════════════╬════════════════╬══════════════╬═══════════════╬═══════════════╬═════════════╬═════════════╬═════════════╣
+    ║ ascii    ║ 0.00605666     ║ 0.00116689     ║ 99.90000000  ║ 19.8494       ║ 19.7779       ║ 3.45x       ║ 28.99x      ║ 25.0%       ║
+    ║ utf-8    ║ 0.02087253     ║ 0.03382693     ║ 100.00000000 ║ 79.3975       ║ 120.1044      ║ 1.00x       ║ 1.00x       ║ 100.0%      ║
+    ║ utf-16   ║ 0.02937989     ║ 0.03775331     ║ 100.00000000 ║ 39.7596       ║ 119.2787      ║ 0.71x       ║ 0.90x       ║ 50.1%       ║
+    ║ utf-32   ║ 0.03982236     ║ 0.03982424     ║ 100.00000000 ║ 79.3975       ║ 119.0964      ║ 0.52x       ║ 0.85x       ║ 100.0%      ║
+    ╚══════════╩════════════════╩════════════════╩══════════════╩═══════════════╩═══════════════╩═════════════╩═════════════╩═════════════╝
+
+
+    ► english_bench.txt - Storage & I/O
+
+    ╔══════════╦════════════════╦═══════════════╦══════════════╦═════════════╦════════════════╦══════════════╗
+    ║ Encoding ║ File Size      ║ Avg Write (s) ║ Avg Read (s) ║ CPU (%)     ║ RAM Delta (MB) ║ Size vs Base ║
+    ╠══════════╬════════════════╬═══════════════╬══════════════╬═════════════╬════════════════╬══════════════╣
+    ║ ascii    ║ 10,179 (Loss!) ║ 0.00132933    ║ 0.00000830   ║ 97.20000000 ║ 0.0000         ║ 0.0%         ║
+    ║ utf-8    ║ 20,989,449     ║ 0.01625134    ║ 0.02334654   ║ 89.10000000 ║ 22.4648        ║ 100.0%       ║
+    ║ utf-16   ║ 18,463,304     ║ 0.01356163    ║ 0.02119457   ║ 91.10000000 ║ 0.0000         ║ 88.0%        ║
+    ║ utf-32   ║ 23,559,124     ║ 0.01016920    ║ 0.00802716   ║ 87.20000000 ║ 22.4688        ║ 112.2%       ║
+    ╚══════════╩════════════════╩═══════════════╩══════════════╩═════════════╩════════════════╩══════════════╝
+
+
+    ► english_bench.txt - CPU & Memory
+
+    ╔══════════╦════════════════╦════════════════╦══════════════╦═══════════════╦═══════════════╦═════════════╦═════════════╦═════════════╗
+    ║ Encoding ║ Avg Encode (s) ║ Avg Decode (s) ║ CPU (%)      ║ Peak Enc (MB) ║ Peak Dec (MB) ║ Enc vs Base ║ Dec vs Base ║ Mem vs Base ║
+    ╠══════════╬════════════════╬════════════════╬══════════════╬═══════════════╬═══════════════╬═════════════╬═════════════╬═════════════╣
+    ║ ascii    ║ 0.00121310     ║ 0.00000048     ║ 100.50000000 ║ 5.6170        ║ 0.0097        ║ 5.10x       ║ 36623.95x   ║ 25.0%       ║
+    ║ utf-8    ║ 0.00618795     ║ 0.01759275     ║ 100.00000000 ║ 22.4678       ║ 100.0856      ║ 1.00x       ║ 1.00x       ║ 100.0%      ║
+    ║ utf-16   ║ 0.00634187     ║ 0.01523923     ║ 100.00000000 ║ 17.6080       ║ 44.0200       ║ 0.98x       ║ 1.15x       ║ 78.4%       ║
+    ║ utf-32   ║ 0.00241035     ║ 0.00247318     ║ 99.90000000  ║ 22.4678       ║ 28.0848       ║ 2.57x       ║ 7.11x       ║ 100.0%      ║
+    ╚══════════╩════════════════╩════════════════╩══════════════╩═══════════════╩═══════════════╩═════════════╩═════════════╩═════════════╝
+
+
+    ► multilingual_bench.txt - Storage & I/O
+
+    ╔══════════╦════════════╦═══════════════╦══════════════╦═════════════╦════════════════╦══════════════╗
+    ║ Encoding ║ File Size  ║ Avg Write (s) ║ Avg Read (s) ║ CPU (%)     ║ RAM Delta (MB) ║ Size vs Base ║
+    ╠══════════╬════════════╬═══════════════╬══════════════╬═════════════╬════════════════╬══════════════╣
+    ║ ascii    ║ 21,511,625 ║ 0.00849342    ║ 0.00310692   ║ 80.80000000 ║ 0.0000         ║ 100.0%       ║
+    ║ utf-8    ║ 21,511,625 ║ 0.00851055    ║ 0.00320196   ║ 81.10000000 ║ 0.0000         ║ 100.0%       ║
+    ║ utf-16   ║ 43,023,252 ║ 0.01591501    ║ 0.00918506   ║ 85.40000000 ║ 0.0000         ║ 200.0%       ║
+    ║ utf-32   ║ 86,046,504 ║ 0.07565133    ║ 0.04313910   ║ 83.80000000 ║ 0.0039         ║ 400.0%       ║
+    ╚══════════╩════════════╩═══════════════╩══════════════╩═════════════╩════════════════╩══════════════╝
+
+
+    ► multilingual_bench.txt - CPU & Memory
+
+    ╔══════════╦════════════════╦════════════════╦═════════════╦═══════════════╦═══════════════╦═════════════╦═════════════╦═════════════╗
+    ║ Encoding ║ Avg Encode (s) ║ Avg Decode (s) ║ CPU (%)     ║ Peak Enc (MB) ║ Peak Dec (MB) ║ Enc vs Base ║ Dec vs Base ║ Mem vs Base ║
+    ╠══════════╬════════════════╬════════════════╬═════════════╬═══════════════╬═══════════════╬═════════════╬═════════════╬═════════════╣
+    ║ ascii    ║ 0.00092560     ║ 0.00103685     ║ 99.90000000 ║ 20.5151       ║ 20.5151       ║ 1.00x       ║ 1.15x       ║ 100.0%      ║
+    ║ utf-8    ║ 0.00092281     ║ 0.00119015     ║ 99.90000000 ║ 20.5151       ║ 20.5151       ║ 1.00x       ║ 1.00x       ║ 100.0%      ║
+    ║ utf-16   ║ 0.00931277     ║ 0.00523039     ║ 99.90000000 ║ 41.0302       ║ 20.5151       ║ 0.10x       ║ 0.23x       ║ 200.0%      ║
+    ║ utf-32   ║ 0.03403558     ║ 0.00926680     ║ 99.90000000 ║ 82.0604       ║ 20.5151       ║ 0.03x       ║ 0.13x       ║ 400.0%      ║
+    ╚══════════╩════════════════╩════════════════╩═════════════╩═══════════════╩═══════════════╩═════════════╩═════════════╩═════════════╝
+
+
+
+
+
+  ╔══════════════╗
+  ║  VALIDATION  ║
+  ╚══════════════╝
+
+    ╔═[ Profiler: cjk_journey_bench.txt ]══════════════════════════════════════════════════╗
+    ║ 2001 function calls in 18.298 seconds                                              ║
+    ║                                                                                    ║
+    ║    Ordered by: cumulative time                                                     ║
+    ║    List reduced from 3 to 1 due to restriction <'encode'>                          ║
+    ║                                                                                    ║
+    ║    ncalls  tottime  percall  cumtime  percall filename:lineno(function)            ║
+    ║      1000    5.787    0.006    5.787    0.006 {method 'encode' of 'str' objects}   ║
+    ║                                                                                    ║
+    ║                                                                                    ║
+    ║          2001 function calls in 18.298 seconds                                     ║
+    ║                                                                                    ║
+    ║    Ordered by: cumulative time                                                     ║
+    ║    List reduced from 3 to 1 due to restriction <'decode'>                          ║
+    ║                                                                                    ║
+    ║    ncalls  tottime  percall  cumtime  percall filename:lineno(function)            ║
+    ║      1000   12.512    0.013   12.512    0.013 {method 'decode' of 'bytes' objects} ║
+    ╚════════════════════════════════════════════════════════════════════════════════════╝
+
+
+[+] Benchmark Complete. Report saved to 'analysis_report.txt'
+avyakths@pop-os ~/d/C/v/script_v8_fulltestsuite (main)> cd ../script_v9_fancynadaptive/
+avyakths@pop-os ~/d/C/v/script_v9_fancynadaptive (main)> python3 script_v9_fancynadaptive.py
+
+
+
+  ╔═════════════════════════════════════════════════╗
+  ║  ENCODING BENCHMARK SUITE V9.0 (FANCY EDITION)  ║
+  ╚═════════════════════════════════════════════════╝
+
+  • Mode: Adaptive
+  • Target Duration: 2.0s per test
+  • Hard Min Iterations: 100
+--- Phase 1: Parallel Dataset Preparation ---
+  • Input Directory: /home/avyakths/development/Character Encoding Analysis/versions/script_v9_fancynadaptive/../../user_bench_files_freesize
+  • Target Size: 20 MB
+    ✓ [Cached] cjk_journey_bench.txt
+    ✓ [Cached] english_bench.txt
+    ✓ [Cached] emoji-test_bench.txt
+    ✓ [Cached] multilingual_bench.txt
+
+  ► Ready to benchmark 4 standardized files.
+
+--- Phase 2: Adaptive Benchmarking Execution ---
+
+
+
+  ╔══════════════════════════════════╗
+  ║  TESTING: CJK_JOURNEY_BENCH.TXT  ║
+  ╚══════════════════════════════════╝
+
+  ✓ Loaded 7,064,640 chars
+
+  ► Running Disk I/O Tests...
+    • ascii...
+      ├─ Write: 0.0014s [n=1,331 | 1.91s]
+      ├─ Read:  0.0000s [n=273,399 | 1.95s]
+      └─ Size:  0.00 MB (Loss!)
+    • utf-8...
+      ├─ Write: 0.0130s [n=153 | 1.99s]
+      ├─ Read:  0.0345s [n=100 | 3.45s]
+      └─ Size:  20.21 MB
+    • utf-16...
+      ├─ Write: 0.0065s [n=305 | 1.99s]
+      ├─ Read:  0.0245s [n=100 | 2.45s]
+      └─ Size:  13.47 MB
+    • utf-32...
+      ├─ Write: 0.0124s [n=160 | 1.98s]
+      ├─ Read:  0.0270s [n=100 | 2.70s]
+      └─ Size:  26.95 MB
+
+  ► Running In-Memory Tests...
+    • ascii...
+      ├─ Encode: 0.0014s [n=1,341 | 1.91s]
+      ├─ Decode: 0.0000s [n=10,000,100 | 0.53s]
+      └─ RAM:    6.74 MB
+    • utf-8...
+      ├─ Encode: 0.0059s [n=337 | 1.98s]
+      ├─ Decode: 0.0132s [n=152 | 2.00s]
+      └─ RAM:    20.21 MB
+    • utf-16...
+      ├─ Encode: 0.0018s [n=1,069 | 1.94s]
+      ├─ Decode: 0.0064s [n=313 | 2.00s]
+      └─ RAM:    13.47 MB
+    • utf-32...
+      ├─ Encode: 0.0029s [n=667 | 1.93s]
+      ├─ Decode: 0.0029s [n=680 | 2.00s]
+      └─ RAM:    26.95 MB
+
+  ► Running cProfile Verification...
+    ✓ Captured profiling data
+
+
+
+  ╔══════════════════════════════╗
+  ║  TESTING: ENGLISH_BENCH.TXT  ║
+  ╚══════════════════════════════╝
+
+  ✓ Loaded 21,511,625 chars
+
+  ► Running Disk I/O Tests...
+    • ascii...
+      ├─ Write: 0.0086s [n=230 | 1.97s]
+      ├─ Read:  0.0032s [n=628 | 1.99s]
+      └─ Size:  20.52 MB
+    • utf-8...
+      ├─ Write: 0.0086s [n=234 | 2.01s]
+      ├─ Read:  0.0033s [n=609 | 2.00s]
+      └─ Size:  20.52 MB
+    • utf-16...
+      ├─ Write: 0.0161s [n=124 | 1.99s]
+      ├─ Read:  0.0093s [n=215 | 1.99s]
+      └─ Size:  41.03 MB
+    • utf-32...
+      ├─ Write: 0.0599s [n=100 | 5.99s]
+      ├─ Read:  0.0405s [n=100 | 4.05s]
+      └─ Size:  82.06 MB
+
+  ► Running In-Memory Tests...
+    • ascii...
+      ├─ Encode: 0.0009s [n=2,109 | 1.89s]
+      ├─ Decode: 0.0010s [n=1,917 | 1.99s]
+      └─ RAM:    20.52 MB
+    • utf-8...
+      ├─ Encode: 0.0009s [n=2,108 | 1.89s]
+      ├─ Decode: 0.0012s [n=1,698 | 1.99s]
+      └─ RAM:    20.52 MB
+    • utf-16...
+      ├─ Encode: 0.0164s [n=121 | 1.99s]
+      ├─ Decode: 0.0052s [n=384 | 2.00s]
+      └─ RAM:    41.03 MB
+    • utf-32...
+      ├─ Encode: 0.0324s [n=100 | 3.24s]
+      ├─ Decode: 0.0088s [n=226 | 1.99s]
+      └─ RAM:    82.06 MB
+
+
+
+  ╔═════════════════════════════════╗
+  ║  TESTING: EMOJI-TEST_BENCH.TXT  ║
+  ╚═════════════════════════════════╝
+
+  ✓ Loaded 5,889,780 chars
+
+  ► Running Disk I/O Tests...
+    • ascii...
+      ├─ Write: 0.0013s [n=1,351 | 1.81s]
+      ├─ Read:  0.0000s [n=230,880 | 1.96s]
+      └─ Size:  0.01 MB (Loss!)
+    • utf-8...
+      ├─ Write: 0.0134s [n=146 | 1.96s]
+      ├─ Read:  0.0230s [n=100 | 2.30s]
+      └─ Size:  20.02 MB
+    • utf-16...
+      ├─ Write: 0.0121s [n=164 | 1.99s]
+      ├─ Read:  0.0128s [n=156 | 1.99s]
+      └─ Size:  17.61 MB
+    • utf-32...
+      ├─ Write: 0.0102s [n=194 | 1.98s]
+      ├─ Read:  0.0081s [n=247 | 2.00s]
+      └─ Size:  22.47 MB
+
+  ► Running In-Memory Tests...
+    • ascii...
+      ├─ Encode: 0.0012s [n=1,549 | 1.89s]
+      ├─ Decode: 0.0000s [n=4,255,771 | 1.91s]
+      └─ RAM:    5.62 MB
+    • utf-8...
+      ├─ Encode: 0.0062s [n=318 | 1.98s]
+      ├─ Decode: 0.0175s [n=114 | 2.00s]
+      └─ RAM:    22.47 MB
+    • utf-16...
+      ├─ Encode: 0.0063s [n=313 | 1.98s]
+      ├─ Decode: 0.0072s [n=279 | 2.00s]
+      └─ RAM:    17.61 MB
+    • utf-32...
+      ├─ Encode: 0.0024s [n=806 | 1.95s]
+      ├─ Decode: 0.0025s [n=814 | 2.00s]
+      └─ RAM:    22.47 MB
+
+
+
+  ╔═══════════════════════════════════╗
+  ║  TESTING: MULTILINGUAL_BENCH.TXT  ║
+  ╚═══════════════════════════════════╝
+
+  ✓ Loaded 20,813,581 chars
+
+  ► Running Disk I/O Tests...
+    • ascii...
+      ├─ Write: 0.0126s [n=156 | 1.97s]
+      ├─ Read:  0.0030s [n=649 | 1.96s]
+      └─ Size:  19.78 MB (Loss!)
+    • utf-8...
+      ├─ Write: 0.0278s [n=100 | 2.78s]
+      ├─ Read:  0.1296s [n=100 | 12.96s]
+      └─ Size:  20.02 MB
+    • utf-16...
+      ├─ Write: 0.0268s [n=100 | 2.68s]
+      ├─ Read:  0.1457s [n=100 | 14.57s]
+      └─ Size:  39.76 MB
+    • utf-32...
+      ├─ Write: 0.0659s [n=100 | 6.59s]
+      ├─ Read:  0.1612s [n=100 | 16.12s]
+      └─ Size:  79.40 MB
+
+  ► Running In-Memory Tests...
+    • ascii...
+      ├─ Encode: 0.0057s [n=347 | 1.97s]
+      ├─ Decode: 0.0010s [n=2,021 | 2.00s]
+      └─ RAM:    19.85 MB
+    • utf-8...
+      ├─ Encode: 0.0204s [n=100 | 2.04s]
+      ├─ Decode: 0.0328s [n=100 | 3.28s]
+      └─ RAM:    79.40 MB
+    • utf-16...
+      ├─ Encode: 0.0287s [n=100 | 2.87s]
+      ├─ Decode: 0.0364s [n=100 | 3.64s]
+      └─ RAM:    39.76 MB
+    • utf-32...
+      ├─ Encode: 0.0397s [n=100 | 3.97s]
+      ├─ Decode: 0.0391s [n=100 | 3.91s]
+      └─ RAM:    79.40 MB
+--- Phase 3: Generating Visualizations ---
+  ✓ Saved Chart: chart_storage_efficiency.png
+  ✓ Saved Chart: chart_cpu_decode_speed.png
+  ✓ Saved Chart: chart_memory_usage.png
+
+
+
+
+  ╔═════════════════════════╗
+  ║  FINAL ANALYSIS REPORT  ║
+  ╚═════════════════════════╝
+
+    ► cjk_journey_bench.txt - Storage & I/O
+
+    ╔══════════╦════════════╦═══════════════╦══════════════╦═════════════╦════════════════╦══════════════╗
+    ║ Encoding ║ File Size  ║ Avg Write (s) ║ Avg Read (s) ║ CPU (%)     ║ RAM Delta (MB) ║ Size vs Base ║
+    ╠══════════╬════════════╬═══════════════╬══════════════╬═════════════╬════════════════╬══════════════╣
+    ║ ascii    ║ 0 (Loss!)  ║ 0.00143544    ║ 0.00000715   ║ 99.90000000 ║ 0.0000         ║ 0.0%         ║
+    ║ utf-8    ║ 21,193,920 ║ 0.01300545    ║ 0.03445829   ║ 93.80000000 ║ 0.1250         ║ 100.0%       ║
+    ║ utf-16   ║ 14,129,282 ║ 0.00651524    ║ 0.02446100   ║ 89.80000000 ║ 0.0156         ║ 66.7%        ║
+    ║ utf-32   ║ 28,258,564 ║ 0.01235066    ║ 0.02704176   ║ 90.80000000 ║ 0.0195         ║ 133.3%       ║
+    ╚══════════╩════════════╩═══════════════╩══════════════╩═════════════╩════════════════╩══════════════╝
+
+
+    ► cjk_journey_bench.txt - CPU & Memory
+
+    ╔══════════╦════════════════╦════════════════╦══════════════╦═══════════════╦═══════════════╦═════════════╦═════════════╦═════════════╗
+    ║ Encoding ║ Avg Encode (s) ║ Avg Decode (s) ║ CPU (%)      ║ Peak Enc (MB) ║ Peak Dec (MB) ║ Enc vs Base ║ Dec vs Base ║ Mem vs Base ║
+    ╠══════════╬════════════════╬════════════════╬══════════════╬═══════════════╬═══════════════╬═════════════╬═════════════╬═════════════╣
+    ║ ascii    ║ 0.00142211     ║ 0.00000005     ║ 100.10000000 ║ 6.7374        ║ 6.7374        ║ 4.13x       ║ 249208.96x  ║ 33.3%       ║
+    ║ utf-8    ║ 0.00587110     ║ 0.01318333     ║ 100.30000000 ║ 20.2121       ║ 20.2121       ║ 1.00x       ║ 1.00x       ║ 100.0%      ║
+    ║ utf-16   ║ 0.00181650     ║ 0.00637696     ║ 100.00000000 ║ 13.4748       ║ 13.4748       ║ 3.23x       ║ 2.07x       ║ 66.7%       ║
+    ║ utf-32   ║ 0.00290081     ║ 0.00293849     ║ 100.10000000 ║ 26.9495       ║ 26.9495       ║ 2.02x       ║ 4.49x       ║ 133.3%      ║
+    ╚══════════╩════════════════╩════════════════╩══════════════╩═══════════════╩═══════════════╩═════════════╩═════════════╩═════════════╝
+
+
+    ► emoji-test_bench.txt - Storage & I/O
+
+    ╔══════════╦════════════════╦═══════════════╦══════════════╦═════════════╦════════════════╦══════════════╗
+    ║ Encoding ║ File Size      ║ Avg Write (s) ║ Avg Read (s) ║ CPU (%)     ║ RAM Delta (MB) ║ Size vs Base ║
+    ╠══════════╬════════════════╬═══════════════╬══════════════╬═════════════╬════════════════╬══════════════╣
+    ║ ascii    ║ 10,179 (Loss!) ║ 0.00134070    ║ 0.00000850   ║ 98.90000000 ║ 0.0000         ║ 0.0%         ║
+    ║ utf-8    ║ 20,989,449     ║ 0.01342865    ║ 0.02297682   ║ 92.80000000 ║ 0.0000         ║ 100.0%       ║
+    ║ utf-16   ║ 18,463,304     ║ 0.01212755    ║ 0.01278204   ║ 92.40000000 ║ 22.4688        ║ 88.0%        ║
+    ║ utf-32   ║ 23,559,124     ║ 0.01018631    ║ 0.00808902   ║ 88.60000000 ║ 0.0000         ║ 112.2%       ║
+    ╚══════════╩════════════════╩═══════════════╩══════════════╩═════════════╩════════════════╩══════════════╝
+
+
+    ► emoji-test_bench.txt - CPU & Memory
+
+    ╔══════════╦════════════════╦════════════════╦══════════════╦═══════════════╦═══════════════╦═════════════╦═════════════╦═════════════╗
+    ║ Encoding ║ Avg Encode (s) ║ Avg Decode (s) ║ CPU (%)      ║ Peak Enc (MB) ║ Peak Dec (MB) ║ Enc vs Base ║ Dec vs Base ║ Mem vs Base ║
+    ╠══════════╬════════════════╬════════════════╬══════════════╬═══════════════╬═══════════════╬═════════════╬═════════════╬═════════════╣
+    ║ ascii    ║ 0.00122013     ║ 0.00000045     ║ 100.10000000 ║ 5.6170        ║ 5.6170        ║ 5.11x       ║ 39098.22x   ║ 25.0%       ║
+    ║ utf-8    ║ 0.00623767     ║ 0.01751718     ║ 99.80000000  ║ 22.4678       ║ 22.4678       ║ 1.00x       ║ 1.00x       ║ 100.0%      ║
+    ║ utf-16   ║ 0.00634077     ║ 0.00715286     ║ 100.10000000 ║ 17.6080       ║ 17.6080       ║ 0.98x       ║ 2.45x       ║ 78.4%       ║
+    ║ utf-32   ║ 0.00241320     ║ 0.00246164     ║ 100.00000000 ║ 22.4678       ║ 22.4678       ║ 2.58x       ║ 7.12x       ║ 100.0%      ║
+    ╚══════════╩════════════════╩════════════════╩══════════════╩═══════════════╩═══════════════╩═════════════╩═════════════╩═════════════╝
+
+
+    ► english_bench.txt - Storage & I/O
+
+    ╔══════════╦════════════╦═══════════════╦══════════════╦═════════════╦════════════════╦══════════════╗
+    ║ Encoding ║ File Size  ║ Avg Write (s) ║ Avg Read (s) ║ CPU (%)     ║ RAM Delta (MB) ║ Size vs Base ║
+    ╠══════════╬════════════╬═══════════════╬══════════════╬═════════════╬════════════════╬══════════════╣
+    ║ ascii    ║ 21,511,625 ║ 0.00856263    ║ 0.00317356   ║ 86.80000000 ║ 0.0039         ║ 100.0%       ║
+    ║ utf-8    ║ 21,511,625 ║ 0.00856963    ║ 0.00327810   ║ 87.50000000 ║ 0.0000         ║ 100.0%       ║
+    ║ utf-16   ║ 43,023,252 ║ 0.01605681    ║ 0.00925255   ║ 88.40000000 ║ 20.5156        ║ 200.0%       ║
+    ║ utf-32   ║ 86,046,504 ║ 0.05988771    ║ 0.04053743   ║ 93.50000000 ║ 0.0000         ║ 400.0%       ║
+    ╚══════════╩════════════╩═══════════════╩══════════════╩═════════════╩════════════════╩══════════════╝
+
+
+    ► english_bench.txt - CPU & Memory
+
+    ╔══════════╦════════════════╦════════════════╦══════════════╦═══════════════╦═══════════════╦═════════════╦═════════════╦═════════════╗
+    ║ Encoding ║ Avg Encode (s) ║ Avg Decode (s) ║ CPU (%)      ║ Peak Enc (MB) ║ Peak Dec (MB) ║ Enc vs Base ║ Dec vs Base ║ Mem vs Base ║
+    ╠══════════╬════════════════╬════════════════╬══════════════╬═══════════════╬═══════════════╬═════════════╬═════════════╬═════════════╣
+    ║ ascii    ║ 0.00089725     ║ 0.00103674     ║ 100.00000000 ║ 20.5151       ║ 20.5151       ║ 1.00x       ║ 1.13x       ║ 100.0%      ║
+    ║ utf-8    ║ 0.00089682     ║ 0.00116956     ║ 100.10000000 ║ 20.5151       ║ 20.5151       ║ 1.00x       ║ 1.00x       ║ 100.0%      ║
+    ║ utf-16   ║ 0.01641435     ║ 0.00519800     ║ 100.10000000 ║ 41.0302       ║ 41.0302       ║ 0.05x       ║ 0.23x       ║ 200.0%      ║
+    ║ utf-32   ║ 0.03238609     ║ 0.00882556     ║ 100.10000000 ║ 82.0604       ║ 82.0604       ║ 0.03x       ║ 0.13x       ║ 400.0%      ║
+    ╚══════════╩════════════════╩════════════════╩══════════════╩═══════════════╩═══════════════╩═════════════╩═════════════╩═════════════╝
+
+
+    ► multilingual_bench.txt - Storage & I/O
+
+    ╔══════════╦════════════════════╦═══════════════╦══════════════╦═════════════╦════════════════╦══════════════╗
+    ║ Encoding ║ File Size          ║ Avg Write (s) ║ Avg Read (s) ║ CPU (%)     ║ RAM Delta (MB) ║ Size vs Base ║
+    ╠══════════╬════════════════════╬═══════════════╬══════════════╬═════════════╬════════════════╬══════════════╣
+    ║ ascii    ║ 20,738,621 (Loss!) ║ 0.01264191    ║ 0.00302690   ║ 91.70000000 ║ 39.4336        ║ 98.8%        ║
+    ║ utf-8    ║ 20,989,737         ║ 0.02779287    ║ 0.12962933   ║ 98.70000000 ║ 0.0039         ║ 100.0%       ║
+    ║ utf-16   ║ 41,690,880         ║ 0.02679408    ║ 0.14565208   ║ 97.80000000 ║ -39.4336       ║ 198.6%       ║
+    ║ utf-32   ║ 83,254,328         ║ 0.06585019    ║ 0.16123890   ║ 97.00000000 ║ 0.0039         ║ 396.6%       ║
+    ╚══════════╩════════════════════╩═══════════════╩══════════════╩═════════════╩════════════════╩══════════════╝
+
+
+    ► multilingual_bench.txt - CPU & Memory
+
+    ╔══════════╦════════════════╦════════════════╦══════════════╦═══════════════╦═══════════════╦═════════════╦═════════════╦═════════════╗
+    ║ Encoding ║ Avg Encode (s) ║ Avg Decode (s) ║ CPU (%)      ║ Peak Enc (MB) ║ Peak Dec (MB) ║ Enc vs Base ║ Dec vs Base ║ Mem vs Base ║
+    ╠══════════╬════════════════╬════════════════╬══════════════╬═══════════════╬═══════════════╬═════════════╬═════════════╬═════════════╣
+    ║ ascii    ║ 0.00568943     ║ 0.00098844     ║ 99.80000000  ║ 19.8494       ║ 19.8494       ║ 3.58x       ║ 33.22x      ║ 25.0%       ║
+    ║ utf-8    ║ 0.02035180     ║ 0.03283441     ║ 100.00000000 ║ 79.3975       ║ 79.3975       ║ 1.00x       ║ 1.00x       ║ 100.0%      ║
+    ║ utf-16   ║ 0.02867041     ║ 0.03637665     ║ 99.90000000  ║ 39.7596       ║ 39.7596       ║ 0.71x       ║ 0.90x       ║ 50.1%       ║
+    ║ utf-32   ║ 0.03973915     ║ 0.03913700     ║ 99.90000000  ║ 79.3975       ║ 79.3975       ║ 0.51x       ║ 0.84x       ║ 100.0%      ║
+    ╚══════════╩════════════════╩════════════════╩══════════════╩═══════════════╩═══════════════╩═════════════╩═════════════╩═════════════╝
+
+
+
+[+] Benchmark Complete. Report saved to 'analysis_report.txt'
+[+] Charts saved to script directory (chart_*.png)
+avyakths@pop-os ~/d/C/v/script_v9_fancynadaptive (main)>
